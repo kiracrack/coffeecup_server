@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+ <STYLE type="text/css">
+ body{ margin:0 auto;  font-family: Arial; font-size: 13px; } 
+ table {border-collapse: collapse ; border: 1px solid #d1d1d1; }
+ td, th {border: 1px solid black; border: 1px solid #d1d1d1;}
+ p{font-size: 13px; }
+ strong{font-size: 16px; }
+ h1, h2, h3, h4{margin:0;}
+ #container {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content {
+	float: left;
+}
+table{
+	page-break-inside: avoid;
+}
+ 
+ .NoBorder{
+ 	border: none;
+ }
+ .NoBorder td,tr{
+ 	border: none;
+ 	padding: 5px;
+ }
+
+
+</style>
+
+ </head> 
+ <body> 
+ <div id="container">
+	<div class="content">
+<table border='1' style='width:700px; margin:3px 0' cellpadding='4' cellspacing='0' style='border-collapse:collapse;'>  
+<tr> 
+	<td align="center" height="25px" width="450" colspan="3" rowspan="2" ><br/><br/><h2>[companyname]</h2><h3>[clasification]</h3><br/><br/></td>
+	<td align="left" width="170"><b><span style="vertical-align: top; float:left">DV No.</span><br/><span style="font-size: 18px; vertical-align: middle center;">[voucherno]</span></b></td>
+</tr> 
+<tr> 
+	<td align="left"><span style="vertical-align: top; float:left">Date:</span><br/> [voucherdate]</td>
+</tr>
+
+<tr> 
+	<td width="50%" style="vertical-align: top;" height="35" colspan="2">Name of Claimant:<br/><h3>[suppliername]</h3></td>
+ 	<td style="vertical-align: top;" height="35" colspan="2">Address:<br/><h4>[supplieraddress]</h4></td>
+</tr>
+</table>
+<table border='1' style='width:700px; margin:3px 0' cellpadding='0' cellspacing='0' style='border-collapse:collapse;'> 
+<tr > 
+	<td colspan="5" align="center" style="padding: 10px 0px;"><b>P A R T I C U L A R S</b></td>
+</tr> 
+<tr>
+	<td>
+		<table class="NoBorder" style="width: 100%; margin: auto;">
+			<tr>
+				<th>DATE</th>
+				<th>PARTICULAR</th>
+				<th>NOTE</th>
+				<th>INVOICE NO</th>
+				<th>AMOUNT</th>
+			</tr>
+			[payable_item]
+
+			<tr><td colspan="4"  style="border: 1px solid #d1d1d1;">
+				<table class="NoBorder"  style="width: 100%; margin: auto;">
+					<tr>
+						<th align="left" style="padding: 2px">PARTICULAR</th>
+						<th align="right" style="padding: 2px">DEBIT</th>
+						<th align="right" style="padding: 2px">CREDIT</th>
+					</tr>
+					[accounting_item]
+				</table>
+			</td><td>&nbsp;</td></tr>
+			<tr><td colspan="4" style="border: 1px solid #d1d1d1;">Amount in Words</td><td rowspan="2" style="border: 1px solid #d1d1d1;" align="center"><h2>[totalamount]</h2></td></tr>
+			<tr><td colspan="4" style="border: 1px solid #d1d1d1;"><b>[amountinwords]</b></td></tr>
+		</table>
+	</td>
+</tr>
+
+</table>
+<table border='1' style='width:700px; margin:3px 0' cellpadding='4' cellspacing='0' style='border-collapse:collapse;'> 
+	<tr > 
+	<td align="center" style="padding: 5px 0px;"><b>S I G N A T O R I E S</b></td>
+</tr> 
+<tr>
+	<td>
+		
+		<table border="0" class="NoBorder">
+			<tr> 
+				<td style="vertical-align: top; padding:3px;" width="233"><span style="float: left;"><b> Prepared By:</b></span> <br/><br/><div style=" font-size: 12px; width: 100%; text-align: center;"><br/><br/><b><u>[preparedby]</u></b><br/>[preparedposition]</div></div></td>
+				<td style="vertical-align: top; padding:3px;" width="233"><span style="float: left;"><b> [approvertitle1]</b></span> <br/><br/><div style=" font-size: 12px; width: 100%; text-align: center;"><br/><br/><b><u>[approvername1]</u></b><br/>[approverposition1]</div></td>
+				<td style="vertical-align: top; padding:3px;" width="233"><span style="float: left;"><b> [approvertitle2]</b></span> <br/><br/><div style=" font-size: 12px; width: 100%; text-align: center;"><br/><br/><b><u>[approvername2]</u></b><br/>[approverposition2]</div></td>
+			</tr>
+			<tr><td>&nbsp;</td></tr>
+			<tr> 
+				<td style="vertical-align: top; padding:3px;" width="233"><span style="float: left;"><b> Received Payment:</b></span> <br/><br/><div style=" font-size: 12px; width: 100%; text-align: center;"><br/><br/><b><u>[suppliername]</u></b><br/>Signature over Printed Name</div></td>
+			</tr> 
+		</table>
+	</td>
+</tr>
+</table>
+
+ 
+</div>
+<div>
+</body> 
+ </html>
+
+ 
+
