@@ -3431,7 +3431,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ClassDiagram2.cd" />
     <None Include="My Project\app.manifest">
       <SubType>Designer</SubType>
     </None>
