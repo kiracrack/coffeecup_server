@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Coffeecup.exe" size="9820672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Coffeecup.exe" size="9819648">
       <assemblyIdentity name="Coffeecup" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vhtK8rwvdR9TPKW4eys/HEqsM3oqDEhm/DogRj6vyN4=</dsig:DigestValue>
+        <dsig:DigestValue>xDlpcjXc7EyWdijP+ybfKkk+ZlkfFFQEkawEIHXzAVM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

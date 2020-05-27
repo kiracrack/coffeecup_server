@@ -103,34 +103,34 @@ Public Class frmLogin
                     ProgressBar1.Visible = True
                 Else
                     If LoadGlobalModule() = True Then
-                        If SystemEngineCode = "" Then
-                            frmActivateEngine.ShowDialog()
-                            End
-                        End If
-                        'If CDate(Now.ToShortDateString) <> CDate(DecryptTripleDES(SystemDate)) Then
-                        '    XtraMessageBox.Show("Your computer system date is invalid!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        'If SystemEngineCode = "" Then
+                        '    frmActivateEngine.ShowDialog()
                         '    End
                         'End If
-                        If EnableRetainersMode = True Then
-                            If SystemExpiryDate = "" Then
-                                If System.IO.File.Exists(Application.StartupPath.ToString & "\winter.txt") = True Then
-                                    frmSystemOwnerConfirmation.ShowDialog(Me)
-                                    If frmSystemOwnerConfirmation.Authourized = True Then
-                                        AdminModule.ShowDialog()
-                                        frmSystemOwnerConfirmation.Authourized = False
-                                    End If
-                                Else
-                                    XtraMessageBox.Show("Modified System Module, Please contact your system administrator!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                    End
-                                End If
+                        ''If CDate(Now.ToShortDateString) <> CDate(DecryptTripleDES(SystemDate)) Then
+                        ''    XtraMessageBox.Show("Your computer system date is invalid!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        ''    End
+                        ''End If
+                        'If EnableRetainersMode = True Then
+                        '    If SystemExpiryDate = "" Then
+                        '        If System.IO.File.Exists(Application.StartupPath.ToString & "\winter.txt") = True Then
+                        '            frmSystemOwnerConfirmation.ShowDialog(Me)
+                        '            If frmSystemOwnerConfirmation.Authourized = True Then
+                        '                AdminModule.ShowDialog()
+                        '                frmSystemOwnerConfirmation.Authourized = False
+                        '            End If
+                        '        Else
+                        '            XtraMessageBox.Show("Modified System Module, Please contact your system administrator!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        '            End
+                        '        End If
 
-                            ElseIf CDate(Now.ToShortDateString) > CDate(DecryptTripleDES(SystemExpiryDate)) Then
-                                    XtraMessageBox.Show("Your System is Expired!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                SendSystemExpired(getMacAddress(), CDate(DecryptTripleDES(SystemExpiryDate)).ToString("MMMM dd, yyyy"))
-                                frmActivateNewExpiration.ShowDialog()
-                                End
-                            End If
-                        End If
+                        '    ElseIf CDate(Now.ToShortDateString) > CDate(DecryptTripleDES(SystemExpiryDate)) Then
+                        '            XtraMessageBox.Show("Your System is Expired!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        '        SendSystemExpired(getMacAddress(), CDate(DecryptTripleDES(SystemExpiryDate)).ToString("MMMM dd, yyyy"))
+                        '        frmActivateNewExpiration.ShowDialog()
+                        '        End
+                        '    End If
+                        'End If
                         loadcompsettings()
                         LoadGeneralSettings()
                         LoadPOSPrinterSetup()
@@ -206,39 +206,39 @@ Public Class frmLogin
             loadcompsettings()
             SystemDatabaseUpdater()
             If LoadGlobalModule() = True Then
-                If SystemEngineCode = "" Then
-                    frmActivateEngine.ShowDialog()
-                    End
-                End If
+                'If SystemEngineCode = "" Then
+                '    frmActivateEngine.ShowDialog()
+                '    End
+                'End If
                 'If CDate(Now.ToShortDateString) <> CDate(DecryptTripleDES(SystemDate)) Then
                 '    XtraMessageBox.Show("Your computer system date is invalid!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 '    End
                 'End If
-                If GlobalDisableSystem = True Then
-                    'XtraMessageBox.Show("Invalid system license file!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    'End
-                ElseIf EnableRetainersMode = True Then
-                    If SystemExpiryDate = "" Then
-                        If System.IO.File.Exists(Application.StartupPath.ToString & "\winter.txt") = True Then
-                            frmSystemOwnerConfirmation.ShowDialog(Me)
-                            If frmSystemOwnerConfirmation.Authourized = True Then
-                                AdminModule.ShowDialog()
-                                frmSystemOwnerConfirmation.Authourized = False
-                            End If
-                        Else
-                            XtraMessageBox.Show("Modified System Module, Please contact your system administrator!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            End
-                        End If
-                    ElseIf CDate(Now.ToShortDateString) > CDate(DecryptTripleDES(SystemExpiryDate)) Then
-                        com.CommandText = "UPDATE tblsystemlicense set tokencode='" & EncryptTripleDES("EXPIRED") & "'" : com.ExecuteNonQuery()
-                    End If
-                    If DecryptTripleDES(qrysingledata("tokencode", "tokencode", "tblsystemlicense")) = "EXPIRED" Then
-                        XtraMessageBox.Show("Your system is already expired! Please contact your coffeecup system provider", GlobalSystemName, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        SendSystemExpired(getMacAddress(), CDate(DecryptTripleDES(SystemExpiryDate)).ToString("MMMM dd, yyyy"))
-                        frmActivateNewExpiration.ShowDialog()
-                        End
-                    End If
-                End If
+                'If GlobalDisableSystem = True Then
+                '    'XtraMessageBox.Show("Invalid system license file!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                '    'End
+                'ElseIf EnableRetainersMode = True Then
+                '    If SystemExpiryDate = "" Then
+                '        If System.IO.File.Exists(Application.StartupPath.ToString & "\winter.txt") = True Then
+                '            frmSystemOwnerConfirmation.ShowDialog(Me)
+                '            If frmSystemOwnerConfirmation.Authourized = True Then
+                '                AdminModule.ShowDialog()
+                '                frmSystemOwnerConfirmation.Authourized = False
+                '            End If
+                '        Else
+                '            XtraMessageBox.Show("Modified System Module, Please contact your system administrator!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                '            End
+                '        End If
+                '    ElseIf CDate(Now.ToShortDateString) > CDate(DecryptTripleDES(SystemExpiryDate)) Then
+                '        com.CommandText = "UPDATE tblsystemlicense set tokencode='" & EncryptTripleDES("EXPIRED") & "'" : com.ExecuteNonQuery()
+                '    End If
+                '    If DecryptTripleDES(qrysingledata("tokencode", "tokencode", "tblsystemlicense")) = "EXPIRED" Then
+                '        XtraMessageBox.Show("Your system is already expired! Please contact your coffeecup system provider", GlobalSystemName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                '        SendSystemExpired(getMacAddress(), CDate(DecryptTripleDES(SystemExpiryDate)).ToString("MMMM dd, yyyy"))
+                '        frmActivateNewExpiration.ShowDialog()
+                '        End
+                '    End If
+                'End If
                 LoadGlobalDate()
                 SystemInfoChecker()
                 loadLoginAppearance()

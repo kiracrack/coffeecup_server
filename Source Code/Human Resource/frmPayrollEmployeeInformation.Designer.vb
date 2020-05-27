@@ -815,7 +815,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl10.Location = New System.Drawing.Point(90, 83)
         Me.LabelControl10.Name = "LabelControl10"
-        Me.LabelControl10.Size = New System.Drawing.Size(19, 15)
+        Me.LabelControl10.Size = New System.Drawing.Size(18, 15)
         Me.LabelControl10.TabIndex = 846
         Me.LabelControl10.Text = "TIN"
         '
@@ -1295,7 +1295,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl19.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl19.Location = New System.Drawing.Point(465, 72)
         Me.LabelControl19.Name = "LabelControl19"
-        Me.LabelControl19.Size = New System.Drawing.Size(18, 15)
+        Me.LabelControl19.Size = New System.Drawing.Size(19, 15)
         Me.LabelControl19.TabIndex = 578
         Me.LabelControl19.Text = "Ext."
         '
@@ -2254,7 +2254,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl8.Location = New System.Drawing.Point(88, 160)
         Me.LabelControl8.Name = "LabelControl8"
-        Me.LabelControl8.Size = New System.Drawing.Size(50, 13)
+        Me.LabelControl8.Size = New System.Drawing.Size(51, 13)
         Me.LabelControl8.TabIndex = 788
         Me.LabelControl8.Text = "Shift Type"
         '
@@ -2485,7 +2485,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl42.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl42.Location = New System.Drawing.Point(86, 140)
         Me.LabelControl42.Name = "LabelControl42"
-        Me.LabelControl42.Size = New System.Drawing.Size(52, 13)
+        Me.LabelControl42.Size = New System.Drawing.Size(51, 13)
         Me.LabelControl42.TabIndex = 607
         Me.LabelControl42.Text = "Basic Rate"
         '
@@ -2521,7 +2521,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl41.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl41.Location = New System.Drawing.Point(63, 114)
         Me.LabelControl41.Name = "LabelControl41"
-        Me.LabelControl41.Size = New System.Drawing.Size(75, 13)
+        Me.LabelControl41.Size = New System.Drawing.Size(76, 13)
         Me.LabelControl41.TabIndex = 604
         Me.LabelControl41.Text = "Employee Type"
         '
@@ -2661,7 +2661,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl48.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl48.Location = New System.Drawing.Point(65, 94)
         Me.LabelControl48.Name = "LabelControl48"
-        Me.LabelControl48.Size = New System.Drawing.Size(58, 13)
+        Me.LabelControl48.Size = New System.Drawing.Size(57, 13)
         Me.LabelControl48.TabIndex = 581
         Me.LabelControl48.Text = "Bank Name"
         '
@@ -3099,7 +3099,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl4.Location = New System.Drawing.Point(27, 43)
         Me.LabelControl4.Name = "LabelControl4"
-        Me.LabelControl4.Size = New System.Drawing.Size(80, 13)
+        Me.LabelControl4.Size = New System.Drawing.Size(81, 13)
         Me.LabelControl4.TabIndex = 628
         Me.LabelControl4.Text = "Deduction Type"
         '
@@ -3415,7 +3415,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl74.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl74.Location = New System.Drawing.Point(27, 43)
         Me.LabelControl74.Name = "LabelControl74"
-        Me.LabelControl74.Size = New System.Drawing.Size(80, 13)
+        Me.LabelControl74.Size = New System.Drawing.Size(81, 13)
         Me.LabelControl74.TabIndex = 641
         Me.LabelControl74.Text = "Additional Type"
         '
@@ -3532,7 +3532,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.LabelControl56.Appearance.Options.UseFont = True
         Me.LabelControl56.Location = New System.Drawing.Point(27, 14)
         Me.LabelControl56.Name = "LabelControl56"
-        Me.LabelControl56.Size = New System.Drawing.Size(82, 15)
+        Me.LabelControl56.Size = New System.Drawing.Size(81, 15)
         Me.LabelControl56.TabIndex = 841
         Me.LabelControl56.Text = "Education Type"
         '
@@ -3773,21 +3773,21 @@ Partial Class frmPayrollEmployeeInformation
         '
         Me.SetAttachmentToolStripMenuItem1.Image = Global.Coffeecup.My.Resources.Resources.inbox__plus
         Me.SetAttachmentToolStripMenuItem1.Name = "SetAttachmentToolStripMenuItem1"
-        Me.SetAttachmentToolStripMenuItem1.Size = New System.Drawing.Size(175, 22)
+        Me.SetAttachmentToolStripMenuItem1.Size = New System.Drawing.Size(176, 22)
         Me.SetAttachmentToolStripMenuItem1.Text = "Add Attachment"
         '
         'cmdViewAttachment
         '
         Me.cmdViewAttachment.Image = Global.Coffeecup.My.Resources.Resources.inbox_document_text
         Me.cmdViewAttachment.Name = "cmdViewAttachment"
-        Me.cmdViewAttachment.Size = New System.Drawing.Size(175, 22)
+        Me.cmdViewAttachment.Size = New System.Drawing.Size(176, 22)
         Me.cmdViewAttachment.Text = "View Attachment"
         '
         'ExtractAttachmentToolStripMenuItem
         '
         Me.ExtractAttachmentToolStripMenuItem.Image = Global.Coffeecup.My.Resources.Resources.inbox__arrow1
         Me.ExtractAttachmentToolStripMenuItem.Name = "ExtractAttachmentToolStripMenuItem"
-        Me.ExtractAttachmentToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.ExtractAttachmentToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.ExtractAttachmentToolStripMenuItem.Text = "Extract Attachment"
         '
         'cmdDelete
@@ -4346,7 +4346,7 @@ Partial Class frmPayrollEmployeeInformation
         Me.cmdTypeofcertificate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cmdTypeofcertificate.Location = New System.Drawing.Point(43, 38)
         Me.cmdTypeofcertificate.Name = "cmdTypeofcertificate"
-        Me.cmdTypeofcertificate.Size = New System.Drawing.Size(108, 15)
+        Me.cmdTypeofcertificate.Size = New System.Drawing.Size(107, 15)
         Me.cmdTypeofcertificate.TabIndex = 839
         Me.cmdTypeofcertificate.Text = "Type of Certification"
         '
