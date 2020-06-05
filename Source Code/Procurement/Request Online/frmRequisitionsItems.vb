@@ -172,8 +172,11 @@ Public Class frmRequisitionsItems
             report.txtpurchasetype.Text = UCase(rst("potype").ToString)
             report.txtdetails.Text = rst("details").ToString
             report.officeid.Text = rst("officeid").ToString
+            report.requesttype = rst("POTYPEID").ToString
         End While
         rst.Close()
+        report.printpending = True
+        report.PrintingSystem.Watermark.Dispose()
 
         report.PaperKind = System.Drawing.Printing.PaperKind.Letter
         report.Bands(BandKind.Detail).Controls.Add(CopyGridControl(Em))

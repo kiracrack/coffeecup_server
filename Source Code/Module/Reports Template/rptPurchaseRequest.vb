@@ -3,6 +3,8 @@ Imports DevExpress.XtraReports.UI
 Imports MySql.Data.MySqlClient
 
 Public Class rptPurchaseRequest
+    Public printpending As Boolean = False
+    Public requesttype As String = ""
     Private Sub rptApprovedPO_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles Me.BeforePrint
         If ReportHeaderImg Is Nothing Then
             imgReportHeader.Visible = False
@@ -68,15 +70,29 @@ Public Class rptPurchaseRequest
         com.CommandText = "DROP TEMPORARY TABLE IF EXISTS tmptblrequisition" : com.ExecuteNonQuery()
         com.CommandText = "CREATE TEMPORARY TABLE tmptblrequisition (  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,  `rptuserid` TEXT,  `rpttitle` TEXT,  `rptapprovername` TEXT,  `rptposition` TEXT,  PRIMARY KEY (`id`)) ENGINE = InnoDB;" : com.ExecuteNonQuery()
 
-        dst = New DataSet : Dim createsec As Integer = 1
-        msda = New MySqlDataAdapter("select * from tblapprovalhistory where referenceno='" & pid.Text & "'  and applevel<>'-' and status='approved'", conn)
-        msda.Fill(dst, 0)
-        For cnts = 0 To dst.Tables(0).Rows.Count - 1
-            With (dst.Tables(0))
-                com.CommandText = "insert into tmptblrequisition set id='" & createsec & "', rptuserid='" & .Rows(cnts)("confirmid").ToString() & "', rpttitle='" & .Rows(cnts)("apptitle").ToString() & "',rptapprovername='" & .Rows(cnts)("confirmby").ToString() & "',rptposition='" & .Rows(cnts)("position").ToString() & "'" : com.ExecuteNonQuery()
-            End With
-            createsec = createsec + 1
-        Next
+        If printpending = True Then
+            dst = New DataSet : Dim createsec As Integer = 1
+            msda = New MySqlDataAdapter("select *, (select fullname from tblaccounts where accountid=tblapprovermainprocess.authorizedid) as fullname , (select designation from tblaccounts where accountid=tblapprovermainprocess.authorizedid) as position  from tblapprovermainprocess where apptype='requisition-approving-process' and requestcode='" & requesttype & "'", conn)
+            msda.Fill(dst, 0)
+            For cnts = 0 To dst.Tables(0).Rows.Count - 1
+                With (dst.Tables(0))
+                    com.CommandText = "insert into tmptblrequisition set id='" & createsec & "', rptuserid='" & .Rows(cnts)("authorizedid").ToString() & "', rpttitle='" & .Rows(cnts)("apptitle").ToString() & "',rptapprovername='" & .Rows(cnts)("fullname").ToString() & "',rptposition='" & .Rows(cnts)("position").ToString() & "'" : com.ExecuteNonQuery()
+                End With
+                createsec = createsec + 1
+            Next
+        Else
+            dst = New DataSet : Dim createsec As Integer = 1
+            msda = New MySqlDataAdapter("select * from tblapprovalhistory where referenceno='" & pid.Text & "'  and applevel<>'-' and status='approved'", conn)
+            msda.Fill(dst, 0)
+            For cnts = 0 To dst.Tables(0).Rows.Count - 1
+                With (dst.Tables(0))
+                    com.CommandText = "insert into tmptblrequisition set id='" & createsec & "', rptuserid='" & .Rows(cnts)("confirmid").ToString() & "', rpttitle='" & .Rows(cnts)("apptitle").ToString() & "',rptapprovername='" & .Rows(cnts)("confirmby").ToString() & "',rptposition='" & .Rows(cnts)("position").ToString() & "'" : com.ExecuteNonQuery()
+                End With
+                createsec = createsec + 1
+            Next
+        End If
+
+
 
         Dim cntApprover As Integer = countrecord("tmptblrequisition")
         If cntApprover > 0 Then
@@ -130,7 +146,7 @@ Public Class rptPurchaseRequest
             Next
         End If
 
-        If cntApprover > 0 Then
+        If cntApprover > 0 And printpending = False Then
             Dim cnt5 As Integer = 1
             Dim ctrPicture() As DevExpress.XtraReports.UI.XRPictureBox = {XrPictureBox2, XrPictureBox3, XrPictureBox4, XrPictureBox5, XrPictureBox6}
             For Each cont As XRPictureBox In ctrPicture

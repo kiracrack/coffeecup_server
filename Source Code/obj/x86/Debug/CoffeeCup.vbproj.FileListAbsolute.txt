@@ -3139,4 +3139,3 @@ D:\VB.NET\Coffeecup Server\Source Code\obj\x86\Debug\CoffeeCup.vbproj.CopyComple
 D:\VB.NET\Coffeecup Server\Source Code\obj\x86\Debug\Coffeecup.exe
 D:\VB.NET\Coffeecup Server\Source Code\obj\x86\Debug\Coffeecup.xml
 D:\VB.NET\Coffeecup Server\Source Code\obj\x86\Debug\Coffeecup.pdb
-D:\VB.NET\Coffeecup Server\Source Code\obj\x86\Debug\CoffeeCup.vbprojAssemblyReference.cache

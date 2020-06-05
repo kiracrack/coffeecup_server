@@ -327,6 +327,8 @@ Partial Class frmPayrollEmployeeInformation
         Me.Em_certificate = New DevExpress.XtraGrid.GridControl()
         Me.gridCertificate = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
+        Me.txtClassification = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.LabelControl77 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabControl1.SuspendLayout()
@@ -525,6 +527,7 @@ Partial Class frmPayrollEmployeeInformation
         CType(Me.Em_certificate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridCertificate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtClassification.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BarManager1
@@ -982,6 +985,8 @@ Partial Class frmPayrollEmployeeInformation
         '
         Me.GroupControl1.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupControl1.Appearance.Options.UseFont = True
+        Me.GroupControl1.Controls.Add(Me.LabelControl77)
+        Me.GroupControl1.Controls.Add(Me.txtClassification)
         Me.GroupControl1.Controls.Add(Me.txtWeight)
         Me.GroupControl1.Controls.Add(Me.LabelControl64)
         Me.GroupControl1.Controls.Add(Me.txtHeight)
@@ -4385,6 +4390,33 @@ Partial Class frmPayrollEmployeeInformation
         Me.gridCertificate.OptionsView.ColumnAutoWidth = False
         Me.gridCertificate.OptionsView.ShowGroupPanel = False
         '
+        'txtClassification
+        '
+        Me.txtClassification.EditValue = ""
+        Me.txtClassification.Location = New System.Drawing.Point(166, 46)
+        Me.txtClassification.Name = "txtClassification"
+        Me.txtClassification.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtClassification.Properties.Appearance.Options.UseFont = True
+        Me.txtClassification.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtClassification.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtClassification.Properties.MaxLength = 50
+        Me.txtClassification.Size = New System.Drawing.Size(145, 22)
+        Me.txtClassification.TabIndex = 0
+        '
+        'LabelControl77
+        '
+        Me.LabelControl77.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LabelControl77.Appearance.Options.UseFont = True
+        Me.LabelControl77.Appearance.Options.UseTextOptions = True
+        Me.LabelControl77.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+        Me.LabelControl77.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
+        Me.LabelControl77.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
+        Me.LabelControl77.Location = New System.Drawing.Point(166, 30)
+        Me.LabelControl77.Name = "LabelControl77"
+        Me.LabelControl77.Size = New System.Drawing.Size(70, 15)
+        Me.LabelControl77.TabIndex = 859
+        Me.LabelControl77.Text = "Classification"
+        '
         'frmPayrollEmployeeInformation
         '
         Me.Appearance.Options.UseFont = True
@@ -4606,6 +4638,7 @@ Partial Class frmPayrollEmployeeInformation
         CType(Me.Em_certificate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridCertificate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtClassification.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -4917,4 +4950,6 @@ Partial Class frmPayrollEmployeeInformation
     Friend WithEvents txtCur_Add_Purok As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents LabelControl75 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtPer_Add_purok As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents LabelControl77 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtClassification As DevExpress.XtraEditors.ComboBoxEdit
 End Class

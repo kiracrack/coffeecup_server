@@ -92,9 +92,12 @@ Module Libraries
             msda.SelectCommand.CommandTimeout = 600000
             msda.Fill(dst, tbl)
             Em.DataSource = dst.Tables(tbl)
-           xgrid.PopulateColumns(dst.Tables(tbl))
-            xgrid.BestFitColumns()
-            Em.ForceInitialize()
+            xgrid.PopulateColumns(dst.Tables(tbl))
+            If xgrid IsNot Nothing Then
+                xgrid.BestFitColumns()
+                Em.ForceInitialize()
+            End If
+
 
 
             xgrid.UserCellPadding = New Padding(1.7)

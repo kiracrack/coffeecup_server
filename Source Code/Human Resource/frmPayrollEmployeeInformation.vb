@@ -43,6 +43,8 @@ Public Class frmPayrollEmployeeInformation
         LoadPickedDataTable("typeofcertificate", txtTypeOfCertificate, gvtypeofcertificate, Me)
         loadCertificate()
 
+        LoadToComboBox("classification", "tblemployees where classification<>''", txtClassification, True)
+
         LoadToComboBox("nationality", "tblemployees where nationality<>''", txtnationality, True)
         LoadToComboBox("religion", "tblemployees where religion<>''", txtreligion, True)
         LoadToComboBox("civilstatus", "tblemployees where civilstatus<>''", txtCivilStatus, True)
@@ -307,7 +309,8 @@ Public Class frmPayrollEmployeeInformation
     End Sub
 
     Public Sub SaveInfo()
-        Dim query As String = " lastname='" & rchar(txtlastname.Text) & "', " _
+        Dim query As String = " classification='" & rchar(txtClassification.Text) & "', " _
+                               + " lastname='" & rchar(txtlastname.Text) & "', " _
                                + " firstname='" & rchar(txtFistname.Text) & "', " _
                                + " middlename='" & rchar(txtmiddlename.Text) & "', " _
                                + " fullname='" & rchar(txtfullname.Text) & "', " _
@@ -377,6 +380,7 @@ Public Class frmPayrollEmployeeInformation
             msda.Fill(dst, 0)
             For cnt = 0 To dst.Tables(0).Rows.Count - 1
                 With (dst.Tables(0))
+                    txtClassification.Text = .Rows(cnt)("classification").ToString
                     txtlastname.Text = .Rows(cnt)("lastname").ToString
                     txtFistname.Text = .Rows(cnt)("firstname").ToString
                     txtmiddlename.Text = .Rows(cnt)("middlename").ToString
@@ -423,7 +427,7 @@ Public Class frmPayrollEmployeeInformation
                     txtLinkClientAccount.Text = .Rows(cnt)("clientaccount").ToString
                     cifid.Text = .Rows(cnt)("linkclientid").ToString
 
-                  
+
 
                     txtOfficeid.Text = .Rows(cnt)("officeid").ToString
                     depid.Text = .Rows(cnt)("depid").ToString
@@ -1225,5 +1229,9 @@ Public Class frmPayrollEmployeeInformation
         If txtOfficeid.Text = "" Then Exit Sub
         LoadXgridLookupSearch("select depid as code, departmentname as 'Select' from tblcompdepartments where officeid='" & txtOfficeid.Text & "' order by departmentname", "tblcompdepartments", txtDepartment, gv_department, Me)
         gv_department.Columns("code").Visible = False
+    End Sub
+
+    Private Sub ComboBoxEdit1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtClassification.SelectedIndexChanged
+
     End Sub
 End Class

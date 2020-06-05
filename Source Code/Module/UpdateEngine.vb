@@ -3151,6 +3151,13 @@ Module UpdateEngine
             engineupdated = True
         End If
 
+        updateVersion = "2020-06-05"
+        If CBool(qrysingledata("proceedupdate", " if(date_format(databaseversion, '%Y-%m-%d') < '" & updateVersion & "',true,false) as proceedupdate", "tbldatabaseupdatelogs order by databaseversion desc limit 1")) = True Then
+            com.CommandText = "ALTER TABLE `tblemployees` ADD COLUMN `classification` VARCHAR(45) NOT NULL DEFAULT '' AFTER `employeeid`;" : com.ExecuteNonQuery() : DatabaseUpdateLogs(updateVersion, rchar(com.CommandText.ToCharArray))
+            engineupdated = True
+        End If
+
+
         Dim fileSystemInfo As System.IO.FileSystemInfo
         Dim sourceDirectoryInfo As New System.IO.DirectoryInfo(Application.StartupPath.ToString)
         For Each fileSystemInfo In sourceDirectoryInfo.GetFileSystemInfos
