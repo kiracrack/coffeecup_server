@@ -253,7 +253,7 @@ Public Class frmUsersAccounts
                                                 + " password='" & EncryptTripleDES(UCase(txtusername.Text) + txtverify.Text) & "', " _
                                                 + " webpassword=DES_ENCRYPT('" & txtusername.Text + txtverify.Text & "','kira'), " _
                                                 + " emailaddress = '" & txtEmail.Text & "', " _
-                                                + " permission = '" & percode.Text & "',coffeecupuser=" & ckClientUser.CheckState & ",coffeecupposition='" & authCode.Text & "', datereg='" & GlobalDateTime() & "'"
+                                                + " permission = '" & percode.Text & "',coffeecupuser=" & ckClientUser.CheckState & ",coffeecupposition='" & authCode.Text & "', datereg=current_timestamp"
             Else
                 Exit Sub
             End If
@@ -453,7 +453,7 @@ Public Class frmUsersAccounts
     End Sub
     Private Sub RemoveItemToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDelete.Click
         frmChangePassword.userid.Text = GridView1.GetFocusedRowCellValue("Account ID").ToString()
-        frmChangePassword.txtFullname.Text = GridView1.GetFocusedRowCellValue("Username").ToString()
+        frmChangePassword.txtUsername.Text = GridView1.GetFocusedRowCellValue("Username").ToString()
         frmChangePassword.Show(Me)
     End Sub
 

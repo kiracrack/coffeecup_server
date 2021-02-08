@@ -26,12 +26,12 @@ Partial Class frmChangePassword
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.cmdSaveButton = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
-        Me.txtFullname = New DevExpress.XtraEditors.TextEdit()
+        Me.txtUsername = New DevExpress.XtraEditors.TextEdit()
         Me.userid = New DevExpress.XtraEditors.TextEdit()
         CType(Me.uid.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtVerifyPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNewPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtFullname.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtUsername.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.userid.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -124,18 +124,18 @@ Partial Class frmChangePassword
         Me.LabelControl3.TabIndex = 624
         Me.LabelControl3.Text = "Username"
         '
-        'txtFullname
+        'txtUsername
         '
-        Me.txtFullname.EditValue = "KIRACRACK"
-        Me.txtFullname.EnterMoveNextControl = True
-        Me.txtFullname.Location = New System.Drawing.Point(123, 12)
-        Me.txtFullname.Name = "txtFullname"
-        Me.txtFullname.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFullname.Properties.Appearance.Options.UseFont = True
-        Me.txtFullname.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtFullname.Properties.ReadOnly = True
-        Me.txtFullname.Size = New System.Drawing.Size(205, 20)
-        Me.txtFullname.TabIndex = 625
+        Me.txtUsername.EditValue = "KIRACRACK"
+        Me.txtUsername.EnterMoveNextControl = True
+        Me.txtUsername.Location = New System.Drawing.Point(123, 12)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Properties.Appearance.Options.UseFont = True
+        Me.txtUsername.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtUsername.Properties.ReadOnly = True
+        Me.txtUsername.Size = New System.Drawing.Size(205, 20)
+        Me.txtUsername.TabIndex = 625
         '
         'userid
         '
@@ -157,7 +157,7 @@ Partial Class frmChangePassword
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(367, 130)
         Me.Controls.Add(Me.userid)
-        Me.Controls.Add(Me.txtFullname)
+        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.LabelControl3)
         Me.Controls.Add(Me.cmdSaveButton)
         Me.Controls.Add(Me.txtNewPassword)
@@ -173,7 +173,7 @@ Partial Class frmChangePassword
         CType(Me.uid.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtVerifyPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNewPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtFullname.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtUsername.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.userid.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -186,6 +186,6 @@ Partial Class frmChangePassword
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents cmdSaveButton As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtFullname As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtUsername As DevExpress.XtraEditors.TextEdit
     Friend WithEvents userid As DevExpress.XtraEditors.TextEdit
 End Class

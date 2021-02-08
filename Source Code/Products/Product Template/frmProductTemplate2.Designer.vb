@@ -75,6 +75,7 @@ Partial Class frmProductTemplate2
         Me.combogrid = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.tabImage = New DevExpress.XtraTab.XtraTabPage()
         Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
+        Me.ckComputeLength = New DevExpress.XtraEditors.CheckEdit()
         CType(Me.productid.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.catid.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,6 +113,7 @@ Partial Class frmProductTemplate2
         CType(Me.combogrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabImage.SuspendLayout()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ckComputeLength.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'productid
@@ -196,7 +198,7 @@ Partial Class frmProductTemplate2
         Me.LabelControl7.Appearance.Options.UseForeColor = True
         Me.LabelControl7.Location = New System.Drawing.Point(29, 35)
         Me.LabelControl7.Name = "LabelControl7"
-        Me.LabelControl7.Size = New System.Drawing.Size(260, 13)
+        Me.LabelControl7.Size = New System.Drawing.Size(261, 13)
         Me.LabelControl7.TabIndex = 556
         Me.LabelControl7.Text = "This form is allow user add and edit particular item"
         '
@@ -221,7 +223,7 @@ Partial Class frmProductTemplate2
         Me.LabelControl8.Name = "LabelControl8"
         Me.LabelControl8.Size = New System.Drawing.Size(386, 16)
         Me.LabelControl8.TabIndex = 554
-        Me.LabelControl8.Text = "_________________________________________________________________________________" & _
+        Me.LabelControl8.Text = "_________________________________________________________________________________" &
     "_____"
         '
         'txtUnit
@@ -255,7 +257,7 @@ Partial Class frmProductTemplate2
         '
         'ckInputDiscount
         '
-        Me.ckInputDiscount.Location = New System.Drawing.Point(55, 423)
+        Me.ckInputDiscount.Location = New System.Drawing.Point(55, 445)
         Me.ckInputDiscount.Name = "ckInputDiscount"
         Me.ckInputDiscount.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckInputDiscount.Properties.Appearance.Options.UseFont = True
@@ -267,7 +269,7 @@ Partial Class frmProductTemplate2
         '
         Me.LabelControl15.Appearance.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.LabelControl15.Appearance.Options.UseFont = True
-        Me.LabelControl15.Location = New System.Drawing.Point(43, 270)
+        Me.LabelControl15.Location = New System.Drawing.Point(43, 292)
         Me.LabelControl15.Name = "LabelControl15"
         Me.LabelControl15.Size = New System.Drawing.Size(153, 17)
         Me.LabelControl15.TabIndex = 714
@@ -277,7 +279,7 @@ Partial Class frmProductTemplate2
         '
         Me.LabelControl13.Appearance.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.LabelControl13.Appearance.Options.UseFont = True
-        Me.LabelControl13.Location = New System.Drawing.Point(43, 341)
+        Me.LabelControl13.Location = New System.Drawing.Point(43, 363)
         Me.LabelControl13.Name = "LabelControl13"
         Me.LabelControl13.Size = New System.Drawing.Size(150, 17)
         Me.LabelControl13.TabIndex = 713
@@ -286,11 +288,11 @@ Partial Class frmProductTemplate2
         'esba
         '
         Me.esba.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.esba.Location = New System.Drawing.Point(54, 358)
+        Me.esba.Location = New System.Drawing.Point(54, 380)
         Me.esba.Name = "esba"
         Me.esba.Size = New System.Drawing.Size(267, 61)
         Me.esba.TabIndex = 2
-        Me.esba.Text = "Selecting this option without checking on ""allow cashier enter custom product sel" & _
+        Me.esba.Text = "Selecting this option without checking on ""allow cashier enter custom product sel" &
     "ling price"" will automatically compute quantity base on amount entered"
         Me.esba.UseVisualStyleBackColor = True
         '
@@ -298,18 +300,18 @@ Partial Class frmProductTemplate2
         '
         Me.esbq.Checked = True
         Me.esbq.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.esbq.Location = New System.Drawing.Point(54, 291)
+        Me.esbq.Location = New System.Drawing.Point(54, 313)
         Me.esbq.Name = "esbq"
         Me.esbq.Size = New System.Drawing.Size(235, 44)
         Me.esbq.TabIndex = 1
         Me.esbq.TabStop = True
-        Me.esbq.Text = "Proceed item base on quantity  upon executing pos transaction with fixed selling " & _
+        Me.esbq.Text = "Proceed item base on quantity  upon executing pos transaction with fixed selling " &
     "price"
         Me.esbq.UseVisualStyleBackColor = True
         '
         'ckEnableCoupon
         '
-        Me.ckEnableCoupon.Location = New System.Drawing.Point(91, 240)
+        Me.ckEnableCoupon.Location = New System.Drawing.Point(91, 262)
         Me.ckEnableCoupon.Name = "ckEnableCoupon"
         Me.ckEnableCoupon.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckEnableCoupon.Properties.Appearance.Options.UseFont = True
@@ -319,7 +321,7 @@ Partial Class frmProductTemplate2
         '
         'ckOfficeCenter
         '
-        Me.ckOfficeCenter.Location = New System.Drawing.Point(91, 193)
+        Me.ckOfficeCenter.Location = New System.Drawing.Point(91, 215)
         Me.ckOfficeCenter.Name = "ckOfficeCenter"
         Me.ckOfficeCenter.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckOfficeCenter.Properties.Appearance.Options.UseFont = True
@@ -353,7 +355,7 @@ Partial Class frmProductTemplate2
         '
         Me.txtOfficeCenter.EditValue = ""
         Me.txtOfficeCenter.Enabled = False
-        Me.txtOfficeCenter.Location = New System.Drawing.Point(91, 216)
+        Me.txtOfficeCenter.Location = New System.Drawing.Point(91, 238)
         Me.txtOfficeCenter.Name = "txtOfficeCenter"
         Me.txtOfficeCenter.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.25!)
         Me.txtOfficeCenter.Properties.Appearance.Options.UseFont = True
@@ -520,7 +522,7 @@ Partial Class frmProductTemplate2
         'ckRequiredAttendingPerson
         '
         Me.ckRequiredAttendingPerson.Enabled = False
-        Me.ckRequiredAttendingPerson.Location = New System.Drawing.Point(91, 173)
+        Me.ckRequiredAttendingPerson.Location = New System.Drawing.Point(91, 174)
         Me.ckRequiredAttendingPerson.Name = "ckRequiredAttendingPerson"
         Me.ckRequiredAttendingPerson.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckRequiredAttendingPerson.Properties.Appearance.Options.UseFont = True
@@ -547,7 +549,7 @@ Partial Class frmProductTemplate2
         Me.XtraTabControl1.Location = New System.Drawing.Point(0, 0)
         Me.XtraTabControl1.Name = "XtraTabControl1"
         Me.XtraTabControl1.SelectedTabPage = Me.tabInformation
-        Me.XtraTabControl1.Size = New System.Drawing.Size(801, 556)
+        Me.XtraTabControl1.Size = New System.Drawing.Size(801, 574)
         Me.XtraTabControl1.TabIndex = 711
         Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tabInformation, Me.tabImage})
         Me.XtraTabControl1.Transition.AllowTransition = DevExpress.Utils.DefaultBoolean.[True]
@@ -583,7 +585,7 @@ Partial Class frmProductTemplate2
         Me.tabInformation.Controls.Add(Me.txtprocat)
         Me.tabInformation.Controls.Add(Me.LabelControl4)
         Me.tabInformation.Name = "tabInformation"
-        Me.tabInformation.Size = New System.Drawing.Size(799, 525)
+        Me.tabInformation.Size = New System.Drawing.Size(799, 543)
         Me.tabInformation.Text = "Product Information"
         '
         'cmdBaselineUnit
@@ -598,6 +600,7 @@ Partial Class frmProductTemplate2
         '
         'panelSale
         '
+        Me.panelSale.Controls.Add(Me.ckComputeLength)
         Me.panelSale.Controls.Add(Me.cmdEditItem)
         Me.panelSale.Controls.Add(Me.ckInputDiscount)
         Me.panelSale.Controls.Add(Me.txtSellingPrice)
@@ -618,7 +621,7 @@ Partial Class frmProductTemplate2
         Me.panelSale.Enabled = False
         Me.panelSale.Location = New System.Drawing.Point(436, 13)
         Me.panelSale.Name = "panelSale"
-        Me.panelSale.Size = New System.Drawing.Size(349, 498)
+        Me.panelSale.Size = New System.Drawing.Size(349, 519)
         Me.panelSale.TabIndex = 715
         Me.panelSale.Text = "Product Sale Configuration"
         '
@@ -628,7 +631,7 @@ Partial Class frmProductTemplate2
         Me.cmdEditItem.Appearance.Options.UseFont = True
         Me.cmdEditItem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.cmdEditItem.ImageOptions.Image = Global.Coffeecup.My.Resources.Resources.folders_stack1
-        Me.cmdEditItem.Location = New System.Drawing.Point(67, 453)
+        Me.cmdEditItem.Location = New System.Drawing.Point(67, 475)
         Me.cmdEditItem.Name = "cmdEditItem"
         Me.cmdEditItem.Size = New System.Drawing.Size(249, 29)
         Me.cmdEditItem.TabIndex = 721
@@ -781,12 +784,22 @@ Partial Class frmProductTemplate2
         Me.PictureEdit1.Size = New System.Drawing.Size(799, 525)
         Me.PictureEdit1.TabIndex = 0
         '
+        'ckComputeLength
+        '
+        Me.ckComputeLength.Location = New System.Drawing.Point(91, 194)
+        Me.ckComputeLength.Name = "ckComputeLength"
+        Me.ckComputeLength.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckComputeLength.Properties.Appearance.Options.UseFont = True
+        Me.ckComputeLength.Properties.Caption = "Enable Compute Length"
+        Me.ckComputeLength.Size = New System.Drawing.Size(164, 20)
+        Me.ckComputeLength.TabIndex = 722
+        '
         'frmProductTemplate2
         '
         Me.Appearance.Options.UseFont = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(801, 556)
+        Me.ClientSize = New System.Drawing.Size(801, 574)
         Me.Controls.Add(Me.XtraTabControl1)
         Me.Controls.Add(Me.selfrom)
         Me.Controls.Add(Me.mode)
@@ -837,6 +850,7 @@ Partial Class frmProductTemplate2
         CType(Me.combogrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabImage.ResumeLayout(False)
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ckComputeLength.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -896,4 +910,5 @@ Partial Class frmProductTemplate2
     Friend WithEvents panelSale As DevExpress.XtraEditors.GroupControl
     Friend WithEvents cmdEditItem As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cmdBaselineUnit As DevExpress.XtraEditors.HyperlinkLabelControl
+    Friend WithEvents ckComputeLength As DevExpress.XtraEditors.CheckEdit
 End Class

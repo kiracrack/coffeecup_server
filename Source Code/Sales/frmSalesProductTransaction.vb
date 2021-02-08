@@ -99,9 +99,10 @@ Public Class frmSalesProductTransaction
                       + " date_format(datetrn,'%Y-%m-%d %r') as 'Date Transaction', " _
                       + " (select companyname from tblclientaccounts where cifid = tblsalestransaction.cifid) as 'Client', " _
                       + " productname as 'Product Name', " _
+                      + " Remarks, " _
                       + " (select description from tblprocategory where catid=tblsalestransaction.catid) as 'Category', " _
                       + " Quantity, Unit, purchasedprice as 'Purchase Price', originalsellprice as 'Unit Price',  disrate as 'Discount Rate', distotal as 'Discount',chargetotal as 'Charge', taxtotal as VAT, svchargetotal as 'SVC', total as 'Total Amount',Income as Revenue , " _
-                      + " (select fullname from tblaccounts where accountid=tblsalestransaction.attendingperson) as 'Attending Personnel' " _
+                      + " (select fullname from tblaccounts where accountid=tblsalestransaction.attendingperson) as 'Incharge' " _
                       + " from tblsalestransaction where onhold=0 and cancelled=0 and void=0 " & filterasof & viewallproducts & viewalloffices _
                       + " order by datetrn asc", "tblsalestransaction", Em, GridView1, Me)
 

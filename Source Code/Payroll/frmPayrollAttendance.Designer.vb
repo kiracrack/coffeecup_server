@@ -22,6 +22,7 @@ Partial Class frmPayrollAttendance
         Me.components = New System.ComponentModel.Container()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.OverideAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmdPrintDtr = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
@@ -98,35 +99,42 @@ Partial Class frmPayrollAttendance
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OverideAttendanceToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripSeparator2, Me.ToolStripMenuItem3})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OverideAttendanceToolStripMenuItem, Me.cmdPrintDtr, Me.ToolStripMenuItem1, Me.ToolStripSeparator2, Me.ToolStripMenuItem3})
         Me.ContextMenuStrip1.Name = "gridmenustrip"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(180, 76)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(198, 120)
         '
         'OverideAttendanceToolStripMenuItem
         '
         Me.OverideAttendanceToolStripMenuItem.Image = Global.Coffeecup.My.Resources.Resources.tick
         Me.OverideAttendanceToolStripMenuItem.Name = "OverideAttendanceToolStripMenuItem"
-        Me.OverideAttendanceToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.OverideAttendanceToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
         Me.OverideAttendanceToolStripMenuItem.Text = "Overide Attendance"
+        '
+        'cmdPrintDtr
+        '
+        Me.cmdPrintDtr.Image = Global.Coffeecup.My.Resources.Resources.Printer__2_
+        Me.cmdPrintDtr.Name = "cmdPrintDtr"
+        Me.cmdPrintDtr.Size = New System.Drawing.Size(197, 22)
+        Me.cmdPrintDtr.Text = "Print Daily Time Record"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Image = Global.Coffeecup.My.Resources.Resources.notebook__pencil
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(197, 22)
         Me.ToolStripMenuItem1.Text = "Edit Selected"
         Me.ToolStripMenuItem1.Visible = False
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(176, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(194, 6)
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Image = Global.Coffeecup.My.Resources.Resources.arrow_continue_090_left
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(197, 22)
         Me.ToolStripMenuItem3.Text = "Refresh Data"
         '
         'cmdAttendanceSettings
@@ -151,7 +159,7 @@ Partial Class frmPayrollAttendance
         Me.LabelControl56.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl56.Location = New System.Drawing.Point(79, 237)
         Me.LabelControl56.Name = "LabelControl56"
-        Me.LabelControl56.Size = New System.Drawing.Size(46, 13)
+        Me.LabelControl56.Size = New System.Drawing.Size(47, 13)
         Me.LabelControl56.TabIndex = 636
         Me.LabelControl56.Text = "Time Out"
         '
@@ -165,7 +173,7 @@ Partial Class frmPayrollAttendance
         Me.LabelControl53.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl53.Location = New System.Drawing.Point(79, 170)
         Me.LabelControl53.Name = "LabelControl53"
-        Me.LabelControl53.Size = New System.Drawing.Size(46, 13)
+        Me.LabelControl53.Size = New System.Drawing.Size(47, 13)
         Me.LabelControl53.TabIndex = 637
         Me.LabelControl53.Text = "Time Out"
         '
@@ -209,7 +217,7 @@ Partial Class frmPayrollAttendance
         Me.LabelControl55.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl55.Location = New System.Drawing.Point(89, 214)
         Me.LabelControl55.Name = "LabelControl55"
-        Me.LabelControl55.Size = New System.Drawing.Size(36, 13)
+        Me.LabelControl55.Size = New System.Drawing.Size(37, 13)
         Me.LabelControl55.TabIndex = 632
         Me.LabelControl55.Text = "Time In"
         '
@@ -223,7 +231,7 @@ Partial Class frmPayrollAttendance
         Me.LabelControl52.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl52.Location = New System.Drawing.Point(89, 147)
         Me.LabelControl52.Name = "LabelControl52"
-        Me.LabelControl52.Size = New System.Drawing.Size(36, 13)
+        Me.LabelControl52.Size = New System.Drawing.Size(37, 13)
         Me.LabelControl52.TabIndex = 633
         Me.LabelControl52.Text = "Time In"
         '
@@ -359,7 +367,7 @@ Partial Class frmPayrollAttendance
         Me.LabelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl1.Location = New System.Drawing.Point(79, 306)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(46, 13)
+        Me.LabelControl1.Size = New System.Drawing.Size(47, 13)
         Me.LabelControl1.TabIndex = 656
         Me.LabelControl1.Text = "Time Out"
         '
@@ -388,7 +396,7 @@ Partial Class frmPayrollAttendance
         Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl2.Location = New System.Drawing.Point(89, 283)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(36, 13)
+        Me.LabelControl2.Size = New System.Drawing.Size(37, 13)
         Me.LabelControl2.TabIndex = 655
         Me.LabelControl2.Text = "Time In"
         '
@@ -778,4 +786,5 @@ Partial Class frmPayrollAttendance
     Friend WithEvents LabelControl6 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents pic_afternoon_1 As DevExpress.XtraEditors.PictureEdit
     Friend WithEvents pic_afternoon_2 As DevExpress.XtraEditors.PictureEdit
+    Friend WithEvents cmdPrintDtr As ToolStripMenuItem
 End Class

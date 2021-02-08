@@ -29,9 +29,9 @@ Public Class frmPayrollAttendance
  
     Public Sub LoadData()
         If countqry("tblpayrollattendance", "payrollcode='" & payrollcode.Text & "' and employeeid='" & employeeid.Text & "' and approved=1") > 0 Then
-            LoadXgrid("CALL sp_payrollcomputeattendance(FALSE,'" & payrollcode.Text & "','" & employeeid.Text & "')", "sp_payrollshowattendance(FALSE,'" & payrollcode.Text & "','" & employeeid.Text & "')", Em, Gridview1, Me)
+            LoadXgrid("CALL sp_payrollcomputeattendance(FALSE,'" & payrollcode.Text & "','" & employeeid.Text & "')", "sp_payrollcomputeattendance(FALSE,'" & payrollcode.Text & "','" & employeeid.Text & "')", Em, Gridview1, Me)
         Else
-            LoadXgrid("CALL sp_payrollcomputeattendance(TRUE,'" & payrollcode.Text & "','" & employeeid.Text & "')", "sp_payrollshowattendance(TRUE,'" & payrollcode.Text & "','" & employeeid.Text & "')", Em, Gridview1, Me)
+            LoadXgrid("CALL sp_payrollcomputeattendance(TRUE,'" & payrollcode.Text & "','" & employeeid.Text & "')", "sp_payrollcomputeattendance(TRUE,'" & payrollcode.Text & "','" & employeeid.Text & "')", Em, Gridview1, Me)
         End If
 
         XgridHideColumn({"id"}, Gridview1)
@@ -285,5 +285,9 @@ Public Class frmPayrollAttendance
     Private Sub Gridview1_FocusedRowChanged(sender As Object, e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles Gridview1.FocusedRowChanged
         If Gridview1.RowCount = 0 Then Exit Sub
         ShowPicture(employeeid.Text, ConvertDate(Gridview1.GetFocusedRowCellValue("AttendanceDate").ToString))
+    End Sub
+
+    Private Sub cmdPrintDtr_Click(sender As Object, e As EventArgs) Handles cmdPrintDtr.Click
+        PrintDailyTimeRecord(employeeid.Text, Me, Gridview1)
     End Sub
 End Class

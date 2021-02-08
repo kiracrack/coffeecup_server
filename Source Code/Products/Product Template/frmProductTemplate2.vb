@@ -128,7 +128,7 @@ Public Class frmProductTemplate2
             Exit Function
         End If
 
-        UpdateProductTemplate2(mode.Text, productid.Text, txtBarcode.Text, catid.Text, subcatid.Text, rchar(txtProductName.Text), rchar(txtDescription.Text), rchar(txtUnit.Text), Val(CC(txtReorderPoint.Text)), ckEnableSell.CheckState, ckVatEnable.CheckState, ckServiceCharge.CheckState, ckNonInventory.CheckState, ckStandardCosting.CheckState, ckMenuMakerServices.CheckState, ckCustomizeProductOrder.CheckState, ckRequiredAttendingPerson.CheckState, ckOfficeCenter.CheckState, officeid.Text, ckEnableCoupon.CheckState, Val(CC(txtPurchasedPrice.Text)), 0, Val(CC(txtSellingPrice.Text)), If(esbq.Checked = True, "esbq", "esba"), ckInputDiscount.CheckState, False)
+        UpdateProductTemplate2(mode.Text, productid.Text, txtBarcode.Text, catid.Text, subcatid.Text, rchar(txtProductName.Text), rchar(txtDescription.Text), rchar(txtUnit.Text), Val(CC(txtReorderPoint.Text)), ckEnableSell.CheckState, ckVatEnable.CheckState, ckServiceCharge.CheckState, ckNonInventory.CheckState, ckStandardCosting.CheckState, ckMenuMakerServices.CheckState, ckCustomizeProductOrder.CheckState, ckRequiredAttendingPerson.CheckState, ckOfficeCenter.CheckState, officeid.Text, ckComputeLength.CheckState, ckEnableCoupon.CheckState, Val(CC(txtPurchasedPrice.Text)), 0, Val(CC(txtSellingPrice.Text)), If(esbq.Checked = True, "esbq", "esba"), ckInputDiscount.CheckState, False)
         UpdateInventoryInfo(productid.Text, txtProductName.Text, catid.Text, txtUnit.Text, Val(CC(txtSellingPrice.Text)))
         UpdateProductImage(productid.Text, PictureEdit1, Me)
         XtraMessageBox.Show("Product successfully saved!", compname, MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -184,6 +184,7 @@ Public Class frmProductTemplate2
                 ckOfficeCenter.Checked = CBool(.Rows(cnt)("enablecenter").ToString)
                 officeid.Text = .Rows(cnt)("officecenter").ToString
                 txtOfficeCenter.Text = .Rows(cnt)("officecenter").ToString
+                ckComputeLength.Checked = CBool(.Rows(cnt)("enablecomputelength").ToString)
                 ckEnableCoupon.Checked = CBool(.Rows(cnt)("enablecoupon").ToString)
                 ckRequiredAttendingPerson.Checked = CBool(.Rows(cnt)("requiredattendingpersonnel").ToString)
                 txtReorderPoint.Text = .Rows(cnt)("reorderpoint").ToString
@@ -392,7 +393,7 @@ Public Class frmProductTemplate2
         frmBatchingProduct.ProgressBarControl1.Properties.Minimum = 0
         frmBatchingProduct.ProgressBarControl1.Position = 0
         For I = 0 To gv.RowCount - 1
-            UpdateProductTemplate2(mode.Text, getproid(), txtBarcode.Text, catid.Text, subcatid.Text, rchar(gv.Item("Product Name", I).Value), rchar(txtDescription.Text), txtUnit.Text, Val(CC(txtReorderPoint.Text)), ckEnableSell.CheckState, ckVatEnable.CheckState, ckServiceCharge.CheckState, ckNonInventory.CheckState, ckStandardCosting.CheckState, ckMenuMakerServices.CheckState, ckCustomizeProductOrder.CheckState, ckRequiredAttendingPerson.CheckState, ckOfficeCenter.CheckState, officeid.Text, ckEnableCoupon.CheckState, Val(CC(txtPurchasedPrice.Text)), 0, Val(CC(txtSellingPrice.Text)), If(esbq.Checked = True, "esbq", "esba"), ckInputDiscount.CheckState, True)
+            UpdateProductTemplate2(mode.Text, getproid(), txtBarcode.Text, catid.Text, subcatid.Text, rchar(gv.Item("Product Name", I).Value), rchar(txtDescription.Text), txtUnit.Text, Val(CC(txtReorderPoint.Text)), ckEnableSell.CheckState, ckVatEnable.CheckState, ckServiceCharge.CheckState, ckNonInventory.CheckState, ckStandardCosting.CheckState, ckMenuMakerServices.CheckState, ckCustomizeProductOrder.CheckState, ckRequiredAttendingPerson.CheckState, ckOfficeCenter.CheckState, officeid.Text, ckComputeLength.CheckState, ckEnableCoupon.CheckState, Val(CC(txtPurchasedPrice.Text)), 0, Val(CC(txtSellingPrice.Text)), If(esbq.Checked = True, "esbq", "esba"), ckInputDiscount.CheckState, True)
             frmBatchingProduct.ProgressBarControl1.PerformStep()
             frmBatchingProduct.ProgressBarControl1.Update()
         Next

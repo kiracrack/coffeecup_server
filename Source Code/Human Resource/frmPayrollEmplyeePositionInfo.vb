@@ -266,7 +266,7 @@ Public Class frmPayrollEmplyeePositionInfo
         End If
         Dim ColumnQuery As String = " description='" & txtDescription.Text & "', " _
                                + " schedulecode='" & schedulecode.Text & "', " _
-                               + " totalhours='" & txtTotalWorkingHours.EditValue & "', " _
+                               + " totalhours='" & txtTotalWorkingHours.Text & "', " _
                                + " ratepermonth='" & Val(CC(txtMonthlyRate.Text)) & "', " _
                                + " rateperday='" & Val(CC(txtDailyRate.Text)) & "', " _
                                + " rateperhour='" & Val(CC(txtRatePerHour.Text)) & "', " _

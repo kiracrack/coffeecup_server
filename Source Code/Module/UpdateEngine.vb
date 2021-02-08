@@ -3157,6 +3157,12 @@ Module UpdateEngine
             engineupdated = True
         End If
 
+        updateVersion = "2021-01-21"
+        If CBool(qrysingledata("proceedupdate", " if(date_format(databaseversion, '%Y-%m-%d') < '" & updateVersion & "',true,false) as proceedupdate", "tbldatabaseupdatelogs order by databaseversion desc limit 1")) = True Then
+            com.CommandText = "ALTER TABLE `tblglobalproducts` ADD COLUMN `enablecomputelength` BOOLEAN NOT NULL DEFAULT 0 AFTER `updaterequired`;" : com.ExecuteNonQuery() : DatabaseUpdateLogs(updateVersion, rchar(com.CommandText.ToCharArray))
+            engineupdated = True
+        End If
+
 
         Dim fileSystemInfo As System.IO.FileSystemInfo
         Dim sourceDirectoryInfo As New System.IO.DirectoryInfo(Application.StartupPath.ToString)

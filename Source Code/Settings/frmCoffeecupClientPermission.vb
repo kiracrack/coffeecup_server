@@ -125,29 +125,28 @@ Public Class frmCoffeecupClientPermission
     Public Sub filter()
         Dim pos As String = "" : Dim fuel As String = "" : Dim hr As String = "" : Dim procurement As String = "" : Dim inventory As String = "" : Dim hotel As String = ""
         If EnableModuleSales = True Then
-            pos = " pointofsale as 'Point of Sale',vip as 'VIP List', pointofsaleassistant as 'Point of Sale Assistant', cashchange as 'Check Encashment',postexpense as 'Post Expense',accountjournal as 'Account Journal', clientaccounts as 'Client Journal', journalentries as 'Journal Entries',clientpayment as 'Client Payment', salesdelivery as 'Sales Delivery', othertransaction as 'Other Transaction',returnitem as 'Return Item',autoservices as 'Auto Services',clinicservices as 'Clinic Services', "
+            pos = ", pointofsale as 'Point of Sale',vip as 'VIP List', pointofsaleassistant as 'Point of Sale Assistant', cashchange as 'Check Encashment',postexpense as 'Post Expense',accountjournal as 'Account Journal', clientaccounts as 'Client Journal', journalentries as 'Journal Entries',clientpayment as 'Client Payment', salesdelivery as 'Sales Delivery', othertransaction as 'Other Transaction',returnitem as 'Return Item',autoservices as 'Auto Services',clinicservices as 'Clinic Services' "
         End If
         If EnableModuleFuel = True Then
-            fuel = " pumpreading as 'Pump Reading',"
+            fuel = ", pumpreading as 'Pump Reading' "
         End If
         If EnableModuleHR = True Then
-            hr = "employeeattendance as 'Employee Attendance', complaintbox as 'Complaint Box', "
+            hr = ", employeeattendance as 'Employee Attendance', complaintbox as 'Complaint Box' "
         End If
         If EnableModuleProcurement = True Then
-            procurement = " requisition as 'New Requisition', forapprovalrequest as 'For Approval Request',apphistory as 'Approval Log History', voidtrn as 'Void Transaction', purchaseorder as 'Purchase Order', receivingreport as 'Receiving Report', accountspayable as 'Disbursement Voucher',requisitionmgt as 'Requisition Management',"
+            procurement = ", requisition as 'New Requisition', forapprovalrequest as 'For Approval Request',apphistory as 'Approval Log History', voidtrn as 'Void Transaction', purchaseorder as 'Purchase Order', receivingreport as 'Receiving Report', accountspayable as 'Disbursement Voucher',requisitionmgt as 'Requisition Management' "
         End If
         If EnableModuleInventory = True Then
-            inventory = "receivingofgoods as 'Receiving of Goods (Supplier)',receivingtransfer as 'Receiving of Goods (Transfer)', inventorymgt as 'Inventory Management',transfermgt as 'Transfer Management',  stockoutmgt as 'Stockout Management',assetsmgt as 'Assets Management',"
+            inventory = ", receivingofgoods as 'Receiving of Goods (Supplier)',receivingtransfer as 'Receiving of Goods (Transfer)', inventorymgt as 'Inventory Management',transfermgt as 'Transfer Management',  stockoutmgt as 'Stockout Management',assetsmgt as 'Assets Management' "
         End If
         If EnableModuleHotel = True Then
-            hotel = "roomappinquiries as 'Room App Inquiries', hotelreservation as 'Hotel Reservation', hotelmgt as 'Hotel Management', tablesandcottages as 'Tables and Cottages',roomoccupancy as 'Room Occupancy', housekeeping as 'House Keeping',"
+            hotel = ", roomappinquiries as 'Room App Inquiries', hotelreservation as 'Hotel Reservation', hotelmgt as 'Hotel Management', tablesandcottages as 'Tables and Cottages',roomoccupancy as 'Room Occupancy', housekeeping as 'House Keeping' "
         End If
 
         Dim strmodule As String = pos & fuel & hr & procurement & inventory & hotel
-        If strmodule.Length > 0 Then
-            strmodule = strmodule.Remove(strmodule.Length - 1, 1)
-            strmodule = ", " & strmodule
-        End If
+        'If strmodule.Length > 0 Then
+        '    strmodule = strmodule.Remove(strmodule.Length - 1, 1)
+        'End If
         LoadXgrid("Select authCode, authDescription as 'Authorize Person', corpapprover as 'Corporate Approver', officeapprover as '" & GlobalOfficeCaption & " Approver',approveanyoffices as 'Approved any " & GlobalOfficeCaption & "', advancesearch as 'Advance Search',Reminders " & strmodule & ", reportgenerator as 'Report Generator'  from tbluserauthority order by authDescription asc", "tbluserauthority", Em, GridView1, Me)
         GridView1.Columns("authCode").Visible = False
         GridView1.BestFitColumns()

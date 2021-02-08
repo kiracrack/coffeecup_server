@@ -60,18 +60,13 @@ Public Class frmResetDatabase
         If XtraMessageBox.Show("WARNING: You are about to delete all containing data on checked items above! " & Environment.NewLine & Environment.NewLine & "NOTE: If you continue this action, there will be no undo function to retrive all deleted data." & Environment.NewLine & Environment.NewLine & "Are you sure you want to continue?  " & todelete, "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = vbYes Then
             For I = 0 To CheckedListBox1.Items.Count - 1
                 If CheckedListBox1.GetItemChecked(I) = True And CheckedListBox1.Items(I).ToString.Contains("tbl") = True Then
-                    com.CommandText = "DELETE FROM " & CheckedListBox1.Items(I).ToString : com.ExecuteNonQuery()
-                End If
-            Next
-
-            For I = 0 To CheckedListBox1.Items.Count - 1
-                If CheckedListBox1.GetItemChecked(I) = True And CheckedListBox1.Items(I).ToString.Contains("tbl") = True Then
-                    com.CommandText = "ALTER TABLE " & CheckedListBox1.Items(I).ToString & " AUTO_INCREMENT = 1;" : com.ExecuteNonQuery()
+                    com.CommandText = "TRUNCATE " & CheckedListBox1.Items(I).ToString : com.ExecuteNonQuery()
                 End If
             Next
 
             com.CommandText = "UPDATE tblglobalproductssequence set productid='10000'" : com.ExecuteNonQuery()
             com.CommandText = "UPDATE tblsalesbatchsequence set batchcode='10000'" : com.ExecuteNonQuery()
+            com.CommandText = "UPDATE tblappearance set img=null" : com.ExecuteNonQuery()
             com.CommandText = "ALTER TABLE `tblsalessummary` AUTO_INCREMENT = 1000;" : com.ExecuteNonQuery()
             com.CommandText = "ALTER TABLE `tblaccounts` AUTO_INCREMENT = 100;" : com.ExecuteNonQuery()
             com.CommandText = "UPDATE tblgeneralsettings set systemstartdate=current_date, preparedid='', checkedid='',approvedid='',supplierid='',defaultdownloadlocation='',clientlogofilename='logo.png',enablecashiersassistant=0,enablesalesassistant=0,enablesalesdirectproductregister=1,enablesaleinvoicenumber=1, hotelfoliosequence='0000', hotelreceiptsequence='0000', strictadminconfirmed=0,chargeinvoicetemplate='LX',chargeinvoicettitle='SALES INVOICE',chargeinvoicessequence='00000',clientjournaltemplate='LX'" : com.ExecuteNonQuery()
