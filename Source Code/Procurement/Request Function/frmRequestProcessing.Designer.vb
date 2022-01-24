@@ -57,7 +57,7 @@ Partial Class frmRequestProcessing
         Me.cmdCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmdCancel.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdCancel.Appearance.Options.UseFont = True
-        Me.cmdCancel.Location = New System.Drawing.Point(768, 432)
+        Me.cmdCancel.Location = New System.Drawing.Point(770, 434)
         Me.cmdCancel.Name = "cmdCancel"
         Me.cmdCancel.Size = New System.Drawing.Size(112, 30)
         Me.cmdCancel.TabIndex = 3
@@ -69,7 +69,7 @@ Partial Class frmRequestProcessing
         Me.cmdMove.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdMove.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.cmdMove.Appearance.Options.UseFont = True
-        Me.cmdMove.Location = New System.Drawing.Point(513, 432)
+        Me.cmdMove.Location = New System.Drawing.Point(515, 434)
         Me.cmdMove.Name = "cmdMove"
         Me.cmdMove.Size = New System.Drawing.Size(252, 30)
         Me.cmdMove.TabIndex = 2
@@ -83,7 +83,7 @@ Partial Class frmRequestProcessing
         Me.Em.Location = New System.Drawing.Point(13, 82)
         Me.Em.MainView = Me.g_po
         Me.Em.Name = "Em"
-        Me.Em.Size = New System.Drawing.Size(867, 343)
+        Me.Em.Size = New System.Drawing.Size(869, 345)
         Me.Em.TabIndex = 640
         Me.Em.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.g_po})
         '
@@ -132,7 +132,7 @@ Partial Class frmRequestProcessing
         Me.lbldisbursingoffice.Appearance.Options.UseTextOptions = True
         Me.lbldisbursingoffice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.lbldisbursingoffice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
-        Me.lbldisbursingoffice.Location = New System.Drawing.Point(12, 436)
+        Me.lbldisbursingoffice.Location = New System.Drawing.Point(12, 438)
         Me.lbldisbursingoffice.Name = "lbldisbursingoffice"
         Me.lbldisbursingoffice.Size = New System.Drawing.Size(127, 20)
         Me.lbldisbursingoffice.TabIndex = 728
@@ -141,7 +141,7 @@ Partial Class frmRequestProcessing
         'txtDisbursingOffice
         '
         Me.txtDisbursingOffice.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtDisbursingOffice.Location = New System.Drawing.Point(146, 433)
+        Me.txtDisbursingOffice.Location = New System.Drawing.Point(146, 435)
         Me.txtDisbursingOffice.Name = "txtDisbursingOffice"
         Me.txtDisbursingOffice.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDisbursingOffice.Properties.Appearance.Options.UseFont = True
@@ -159,7 +159,7 @@ Partial Class frmRequestProcessing
         Me.cmdViewFullRequest.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdViewFullRequest.Appearance.Options.UseFont = True
         Me.cmdViewFullRequest.Enabled = False
-        Me.cmdViewFullRequest.Location = New System.Drawing.Point(361, 432)
+        Me.cmdViewFullRequest.Location = New System.Drawing.Point(363, 434)
         Me.cmdViewFullRequest.Name = "cmdViewFullRequest"
         Me.cmdViewFullRequest.Size = New System.Drawing.Size(149, 30)
         Me.cmdViewFullRequest.TabIndex = 729
@@ -281,7 +281,7 @@ Partial Class frmRequestProcessing
         Me.AcceptButton = Me.cmdMove
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(892, 469)
+        Me.ClientSize = New System.Drawing.Size(894, 471)
         Me.Controls.Add(Me.potype)
         Me.Controls.Add(Me.reqid)
         Me.Controls.Add(Me.cmdViewFullRequest)
@@ -298,7 +298,7 @@ Partial Class frmRequestProcessing
         Me.Controls.Add(Me.cmdMove)
         Me.Controls.Add(Me.gcontrol_po)
         Me.Controls.Add(Me.Em)
-        Me.MinimumSize = New System.Drawing.Size(908, 508)
+        Me.MinimumSize = New System.Drawing.Size(892, 499)
         Me.Name = "frmRequestProcessing"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Purchase Order Generator"

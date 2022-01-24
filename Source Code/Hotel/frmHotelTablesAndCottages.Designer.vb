@@ -73,7 +73,7 @@ Partial Class frmHotelTablesAndCottages
         Me.CheckEdit1.Location = New System.Drawing.Point(12, 455)
         Me.CheckEdit1.Name = "CheckEdit1"
         Me.CheckEdit1.Properties.Caption = "Select All Item"
-        Me.CheckEdit1.Size = New System.Drawing.Size(93, 19)
+        Me.CheckEdit1.Size = New System.Drawing.Size(93, 20)
         Me.CheckEdit1.TabIndex = 682
         '
         'Em
@@ -85,7 +85,7 @@ Partial Class frmHotelTablesAndCottages
         Me.Em.Location = New System.Drawing.Point(456, 8)
         Me.Em.MainView = Me.GridView1
         Me.Em.Name = "Em"
-        Me.Em.Size = New System.Drawing.Size(341, 480)
+        Me.Em.Size = New System.Drawing.Size(343, 482)
         Me.Em.TabIndex = 684
         Me.Em.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -132,8 +132,8 @@ Partial Class frmHotelTablesAndCottages
         Me.txtprocat.Properties.DisplayMember = "Select Category"
         Me.txtprocat.Properties.ImmediatePopup = True
         Me.txtprocat.Properties.NullText = ""
+        Me.txtprocat.Properties.PopupView = Me.combogrid
         Me.txtprocat.Properties.ValueMember = "Select Category"
-        Me.txtprocat.Properties.View = Me.combogrid
         Me.txtprocat.Size = New System.Drawing.Size(353, 20)
         Me.txtprocat.TabIndex = 685
         '
@@ -148,7 +148,7 @@ Partial Class frmHotelTablesAndCottages
         '
         Me.LabelControl1.Location = New System.Drawing.Point(15, 12)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(77, 13)
+        Me.LabelControl1.Size = New System.Drawing.Size(79, 13)
         Me.LabelControl1.TabIndex = 686
         Me.LabelControl1.Text = "Select Category"
         '
@@ -172,7 +172,7 @@ Partial Class frmHotelTablesAndCottages
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(799, 500)
+        Me.ClientSize = New System.Drawing.Size(801, 502)
         Me.Controls.Add(Me.catid)
         Me.Controls.Add(Me.txtprocat)
         Me.Controls.Add(Me.LabelControl1)
@@ -180,7 +180,7 @@ Partial Class frmHotelTablesAndCottages
         Me.Controls.Add(Me.CheckEdit1)
         Me.Controls.Add(Me.ls)
         Me.Controls.Add(Me.cmdUpdate)
-        Me.MinimumSize = New System.Drawing.Size(815, 539)
+        Me.MinimumSize = New System.Drawing.Size(799, 530)
         Me.Name = "frmHotelTablesAndCottages"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tables and Cottages"

@@ -268,7 +268,7 @@ Partial Class frmNewManualInventory
         Me.LabelControl5.Appearance.Options.UseFont = True
         Me.LabelControl5.Location = New System.Drawing.Point(60, 272)
         Me.LabelControl5.Name = "LabelControl5"
-        Me.LabelControl5.Size = New System.Drawing.Size(54, 15)
+        Me.LabelControl5.Size = New System.Drawing.Size(53, 15)
         Me.LabelControl5.TabIndex = 569
         Me.LabelControl5.Text = "Total Cost"
         '
@@ -333,7 +333,7 @@ Partial Class frmNewManualInventory
         Me.LabelControl7.Appearance.Options.UseFont = True
         Me.LabelControl7.Location = New System.Drawing.Point(84, 43)
         Me.LabelControl7.Name = "LabelControl7"
-        Me.LabelControl7.Size = New System.Drawing.Size(276, 13)
+        Me.LabelControl7.Size = New System.Drawing.Size(277, 13)
         Me.LabelControl7.TabIndex = 581
         Me.LabelControl7.Text = "This form is allow user add and update inventory item"
         '
@@ -356,7 +356,7 @@ Partial Class frmNewManualInventory
         Me.LabelControl8.Name = "LabelControl8"
         Me.LabelControl8.Size = New System.Drawing.Size(271, 16)
         Me.LabelControl8.TabIndex = 579
-        Me.LabelControl8.Text = "_________________________________________________________________________________" & _
+        Me.LabelControl8.Text = "_________________________________________________________________________________" &
     "_____"
         '
         'PanelControl1
@@ -627,7 +627,7 @@ Partial Class frmNewManualInventory
         Me.LabelControl10.Appearance.Options.UseFont = True
         Me.LabelControl10.Location = New System.Drawing.Point(17, 297)
         Me.LabelControl10.Name = "LabelControl10"
-        Me.LabelControl10.Size = New System.Drawing.Size(97, 15)
+        Me.LabelControl10.Size = New System.Drawing.Size(96, 15)
         Me.LabelControl10.TabIndex = 650
         Me.LabelControl10.Text = "Transaction Name"
         '

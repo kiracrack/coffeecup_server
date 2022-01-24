@@ -77,7 +77,7 @@ Partial Class frmResetDatabase
         Me.CheckEdit1.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckEdit1.Properties.Appearance.Options.UseFont = True
         Me.CheckEdit1.Properties.Caption = "Check All"
-        Me.CheckEdit1.Size = New System.Drawing.Size(138, 19)
+        Me.CheckEdit1.Size = New System.Drawing.Size(138, 20)
         Me.CheckEdit1.TabIndex = 621
         '
         'frmResetDatabase

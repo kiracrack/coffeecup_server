@@ -325,7 +325,7 @@ Partial Class frmPayrollAutoAddDeductions
         Me.lblsubject.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.lblsubject.Location = New System.Drawing.Point(10, 68)
         Me.lblsubject.Name = "lblsubject"
-        Me.lblsubject.Size = New System.Drawing.Size(136, 13)
+        Me.lblsubject.Size = New System.Drawing.Size(137, 13)
         Me.lblsubject.TabIndex = 751
         Me.lblsubject.Text = "Subject to (Employee Type)"
         '

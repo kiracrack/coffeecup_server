@@ -65,6 +65,7 @@ Partial Class frmPayrollScheduleType
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
         Me.barDockControlTop.Size = New System.Drawing.Size(323, 0)
         '
         'barDockControlBottom
@@ -72,6 +73,7 @@ Partial Class frmPayrollScheduleType
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 391)
+        Me.barDockControlBottom.Manager = Me.BarManager1
         Me.barDockControlBottom.Size = New System.Drawing.Size(323, 0)
         '
         'barDockControlLeft
@@ -79,6 +81,7 @@ Partial Class frmPayrollScheduleType
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
         Me.barDockControlLeft.Size = New System.Drawing.Size(0, 391)
         '
         'barDockControlRight
@@ -86,6 +89,7 @@ Partial Class frmPayrollScheduleType
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
         Me.barDockControlRight.Location = New System.Drawing.Point(323, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 391)
         '
         'BarButtonItem1
@@ -134,7 +138,7 @@ Partial Class frmPayrollScheduleType
         '
         'LabelControl12
         '
-        Me.LabelControl12.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.LabelControl12.Appearance.Options.UseTextOptions = True
         Me.LabelControl12.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl12.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -147,6 +151,7 @@ Partial Class frmPayrollScheduleType
         'LabelControl9
         '
         Me.LabelControl9.Appearance.Font = New System.Drawing.Font("Century Gothic", 16.0!)
+        Me.LabelControl9.Appearance.Options.UseFont = True
         Me.LabelControl9.Location = New System.Drawing.Point(7, 6)
         Me.LabelControl9.Name = "LabelControl9"
         Me.LabelControl9.Size = New System.Drawing.Size(150, 24)
@@ -209,7 +214,7 @@ Partial Class frmPayrollScheduleType
         Me.ckComputeAttendance.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckComputeAttendance.Properties.Appearance.Options.UseFont = True
         Me.ckComputeAttendance.Properties.Caption = "Attendance"
-        Me.ckComputeAttendance.Size = New System.Drawing.Size(83, 19)
+        Me.ckComputeAttendance.Size = New System.Drawing.Size(83, 20)
         Me.ckComputeAttendance.TabIndex = 765
         '
         'frmPayrollScheduleType

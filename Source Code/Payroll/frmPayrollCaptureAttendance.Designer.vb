@@ -85,7 +85,7 @@ Partial Class frmPayrollCaptureAttendance
         Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl2.Location = New System.Drawing.Point(101, 94)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(12, 13)
+        Me.LabelControl2.Size = New System.Drawing.Size(13, 13)
         Me.LabelControl2.TabIndex = 771
         Me.LabelControl2.Text = "To"
         '
@@ -197,7 +197,7 @@ Partial Class frmPayrollCaptureAttendance
         Me.LabelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl6.Location = New System.Drawing.Point(29, 173)
         Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(84, 13)
+        Me.LabelControl6.Size = New System.Drawing.Size(83, 13)
         Me.LabelControl6.TabIndex = 799
         Me.LabelControl6.Text = "Biometric Model"
         '
@@ -225,7 +225,7 @@ Partial Class frmPayrollCaptureAttendance
         Me.LabelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl3.Location = New System.Drawing.Point(44, 197)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(69, 13)
+        Me.LabelControl3.Size = New System.Drawing.Size(68, 13)
         Me.LabelControl3.TabIndex = 802
         Me.LabelControl3.Text = "Biometric File"
         '

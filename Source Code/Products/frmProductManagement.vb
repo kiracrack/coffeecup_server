@@ -193,7 +193,7 @@ Public Class frmProductManagement
                             + If(EnableModuleSales = True, "(select sum(quantity) from tblinventory where productid=tblglobalproducts.productid) as 'Available Quantity',", "") & "  Unit,reorderpoint as 'Re-Order Point',   " _
                             + " (select count(*) from tblitemvendor where itemid = tblglobalproducts.PRODUCTID) as 'Total Supplier' " _
                             + ProductTemplate _
-                            + " from tblglobalproducts where deleted=0 " & If(CheckEdit1.Checked = True, "", " and catid='" & catid.Text & "' ") & " " _
+                            + " from tblglobalproducts where deleted=0 and allownegativeinputs=0 " & If(CheckEdit1.Checked = True, "", " and catid='" & catid.Text & "' ") & " " _
                             + " and (" & SearchProductName("itemname", txtfilter.Text) & " or barcode like '%" & rchar(keywords) & "%' or PRODUCTID like '%" & rchar(keywords) & "%' or (select DESCRIPTION from tblprocategory where CATID = tblglobalproducts.CATID) like '%" & rchar(keywords) & "%' or (select DESCRIPTION from tblprosubcategory where subcatid = tblglobalproducts.subcatid) like '%" & rchar(keywords) & "%'  or partnumber like '%" & rchar(keywords) & "%') " _
                             + " order by itemname asc", "tblglobalproducts", Em, GridView1, Me)
 

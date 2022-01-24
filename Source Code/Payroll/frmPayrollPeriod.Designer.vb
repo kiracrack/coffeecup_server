@@ -82,7 +82,7 @@ Partial Class frmPayrollPeriod
         Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl2.Location = New System.Drawing.Point(101, 135)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(12, 13)
+        Me.LabelControl2.Size = New System.Drawing.Size(13, 13)
         Me.LabelControl2.TabIndex = 771
         Me.LabelControl2.Text = "To"
         '
@@ -110,7 +110,7 @@ Partial Class frmPayrollPeriod
         Me.LabelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl3.Location = New System.Drawing.Point(53, 41)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(60, 13)
+        Me.LabelControl3.Size = New System.Drawing.Size(61, 13)
         Me.LabelControl3.TabIndex = 774
         Me.LabelControl3.Text = "Payroll Type"
         '

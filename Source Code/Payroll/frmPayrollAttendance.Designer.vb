@@ -101,7 +101,7 @@ Partial Class frmPayrollAttendance
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OverideAttendanceToolStripMenuItem, Me.cmdPrintDtr, Me.ToolStripMenuItem1, Me.ToolStripSeparator2, Me.ToolStripMenuItem3})
         Me.ContextMenuStrip1.Name = "gridmenustrip"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(198, 120)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(198, 98)
         '
         'OverideAttendanceToolStripMenuItem
         '

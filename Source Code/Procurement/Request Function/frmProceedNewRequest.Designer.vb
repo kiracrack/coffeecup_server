@@ -269,7 +269,6 @@ Partial Class frmProceedNewRequest
         Me.DockPanel1.Name = "DockPanel1"
         Me.DockPanel1.Options.ShowCloseButton = False
         Me.DockPanel1.OriginalSize = New System.Drawing.Size(340, 165)
-        Me.DockPanel1.SavedSizeFactor = 0.0R
         Me.DockPanel1.Size = New System.Drawing.Size(340, 470)
         Me.DockPanel1.Text = "Purchase Request Details"
         '
@@ -401,7 +400,7 @@ Partial Class frmProceedNewRequest
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New System.Drawing.Size(218, 13)
         Me.LabelControl4.TabIndex = 558
-        Me.LabelControl4.Text = "_________________________________________________________________________________" & _
+        Me.LabelControl4.Text = "_________________________________________________________________________________" &
     "_____"
         '
         'txtoffice
@@ -436,7 +435,7 @@ Partial Class frmProceedNewRequest
         Me.LabelControl6.Appearance.Options.UseFont = True
         Me.LabelControl6.Location = New System.Drawing.Point(38, 101)
         Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(57, 13)
+        Me.LabelControl6.Size = New System.Drawing.Size(56, 13)
         Me.LabelControl6.TabIndex = 517
         Me.LabelControl6.Text = "Request By"
         '
@@ -465,7 +464,7 @@ Partial Class frmProceedNewRequest
         Me.LabelControl3.Appearance.Options.UseFont = True
         Me.LabelControl3.Location = New System.Drawing.Point(27, 215)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(68, 13)
+        Me.LabelControl3.Size = New System.Drawing.Size(69, 13)
         Me.LabelControl3.TabIndex = 552
         Me.LabelControl3.Text = "Request Type"
         '

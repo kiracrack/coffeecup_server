@@ -145,7 +145,7 @@ Partial Class frmSalesProductTransaction
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(764, 24)
+        Me.barDockControlTop.Size = New System.Drawing.Size(766, 24)
         '
         'barDockControlBottom
         '
@@ -153,7 +153,7 @@ Partial Class frmSalesProductTransaction
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 564)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(764, 0)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(766, 0)
         '
         'barDockControlLeft
         '
@@ -167,7 +167,7 @@ Partial Class frmSalesProductTransaction
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(764, 24)
+        Me.barDockControlRight.Location = New System.Drawing.Point(766, 24)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 540)
         '
@@ -212,7 +212,7 @@ Partial Class frmSalesProductTransaction
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.Em)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
-        Me.SplitContainerControl1.Size = New System.Drawing.Size(764, 540)
+        Me.SplitContainerControl1.Size = New System.Drawing.Size(766, 540)
         Me.SplitContainerControl1.SplitterPosition = 140
         Me.SplitContainerControl1.TabIndex = 11
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
@@ -382,7 +382,7 @@ Partial Class frmSalesProductTransaction
         Me.LabelControl1.Appearance.Options.UseFont = True
         Me.LabelControl1.Location = New System.Drawing.Point(249, 67)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(12, 13)
+        Me.LabelControl1.Size = New System.Drawing.Size(13, 13)
         Me.LabelControl1.TabIndex = 587
         Me.LabelControl1.Text = "To"
         '
@@ -420,7 +420,7 @@ Partial Class frmSalesProductTransaction
         Me.Em.MainView = Me.GridView1
         Me.Em.Name = "Em"
         Me.Em.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemPictureEdit1})
-        Me.Em.Size = New System.Drawing.Size(764, 390)
+        Me.Em.Size = New System.Drawing.Size(766, 390)
         Me.Em.TabIndex = 5
         Me.Em.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -480,13 +480,13 @@ Partial Class frmSalesProductTransaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(764, 564)
+        Me.ClientSize = New System.Drawing.Size(766, 564)
         Me.Controls.Add(Me.SplitContainerControl1)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.MinimumSize = New System.Drawing.Size(766, 481)
+        Me.MinimumSize = New System.Drawing.Size(764, 481)
         Me.Name = "frmSalesProductTransaction"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Product Sales Transaction"

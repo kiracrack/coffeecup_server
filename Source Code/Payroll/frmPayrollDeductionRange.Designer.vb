@@ -82,28 +82,32 @@ Partial Class frmPayrollDeductionRange
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Size = New System.Drawing.Size(680, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
+        Me.barDockControlTop.Size = New System.Drawing.Size(682, 0)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 312)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(680, 0)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 314)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(682, 0)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 312)
+        Me.barDockControlLeft.Manager = Me.BarManager1
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 314)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(680, 0)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 312)
+        Me.barDockControlRight.Location = New System.Drawing.Point(682, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 314)
         '
         'BarButtonItem1
         '
@@ -163,6 +167,7 @@ Partial Class frmPayrollDeductionRange
         'LabelControl9
         '
         Me.LabelControl9.Appearance.Font = New System.Drawing.Font("Century Gothic", 16.0!)
+        Me.LabelControl9.Appearance.Options.UseFont = True
         Me.LabelControl9.Location = New System.Drawing.Point(15, 9)
         Me.LabelControl9.Name = "LabelControl9"
         Me.LabelControl9.Size = New System.Drawing.Size(182, 24)
@@ -178,7 +183,7 @@ Partial Class frmPayrollDeductionRange
         Me.Em.Location = New System.Drawing.Point(231, 0)
         Me.Em.MainView = Me.Gridview1
         Me.Em.Name = "Em"
-        Me.Em.Size = New System.Drawing.Size(449, 310)
+        Me.Em.Size = New System.Drawing.Size(451, 312)
         Me.Em.TabIndex = 645
         Me.Em.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.Gridview1})
         '
@@ -213,6 +218,8 @@ Partial Class frmPayrollDeductionRange
         'LabelControl12
         '
         Me.LabelControl12.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl12.Appearance.Options.UseFont = True
+        Me.LabelControl12.Appearance.Options.UseTextOptions = True
         Me.LabelControl12.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl12.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -233,8 +240,8 @@ Partial Class frmPayrollDeductionRange
         Me.txtdedRange.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtdedRange.Properties.DisplayMember = "Select"
         Me.txtdedRange.Properties.NullText = ""
+        Me.txtdedRange.Properties.PopupView = Me.gv_DeductionRange
         Me.txtdedRange.Properties.ValueMember = "Select"
-        Me.txtdedRange.Properties.View = Me.gv_DeductionRange
         Me.txtdedRange.Size = New System.Drawing.Size(207, 20)
         Me.txtdedRange.TabIndex = 732
         '
@@ -279,6 +286,8 @@ Partial Class frmPayrollDeductionRange
         'LabelControl44
         '
         Me.LabelControl44.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl44.Appearance.Options.UseFont = True
+        Me.LabelControl44.Appearance.Options.UseTextOptions = True
         Me.LabelControl44.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl44.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl44.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -309,6 +318,8 @@ Partial Class frmPayrollDeductionRange
         'LabelControl1
         '
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl1.Appearance.Options.UseFont = True
+        Me.LabelControl1.Appearance.Options.UseTextOptions = True
         Me.LabelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -321,6 +332,8 @@ Partial Class frmPayrollDeductionRange
         'LabelControl2
         '
         Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl2.Appearance.Options.UseFont = True
+        Me.LabelControl2.Appearance.Options.UseTextOptions = True
         Me.LabelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -351,6 +364,8 @@ Partial Class frmPayrollDeductionRange
         'LabelControl3
         '
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl3.Appearance.Options.UseFont = True
+        Me.LabelControl3.Appearance.Options.UseTextOptions = True
         Me.LabelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl3.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -381,6 +396,8 @@ Partial Class frmPayrollDeductionRange
         'LabelControl4
         '
         Me.LabelControl4.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl4.Appearance.Options.UseFont = True
+        Me.LabelControl4.Appearance.Options.UseTextOptions = True
         Me.LabelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -393,6 +410,8 @@ Partial Class frmPayrollDeductionRange
         'LabelControl5
         '
         Me.LabelControl5.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl5.Appearance.Options.UseFont = True
+        Me.LabelControl5.Appearance.Options.UseTextOptions = True
         Me.LabelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl5.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -406,7 +425,7 @@ Partial Class frmPayrollDeductionRange
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(680, 312)
+        Me.ClientSize = New System.Drawing.Size(682, 314)
         Me.Controls.Add(Me.LabelControl5)
         Me.Controls.Add(Me.txtEmployerShare)
         Me.Controls.Add(Me.LabelControl4)
@@ -429,7 +448,7 @@ Partial Class frmPayrollDeductionRange
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.MinimumSize = New System.Drawing.Size(696, 351)
+        Me.MinimumSize = New System.Drawing.Size(680, 342)
         Me.Name = "frmPayrollDeductionRange"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Deduction Range"

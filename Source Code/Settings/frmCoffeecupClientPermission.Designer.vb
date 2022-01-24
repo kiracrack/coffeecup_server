@@ -337,7 +337,7 @@ Partial Class frmCoffeecupClientPermission
         Me.checklistbox.FormattingEnabled = True
         Me.checklistbox.Location = New System.Drawing.Point(12, 75)
         Me.checklistbox.Name = "checklistbox"
-        Me.checklistbox.Size = New System.Drawing.Size(393, 264)
+        Me.checklistbox.Size = New System.Drawing.Size(393, 224)
         Me.checklistbox.TabIndex = 387
         '
         'cmdUpdate

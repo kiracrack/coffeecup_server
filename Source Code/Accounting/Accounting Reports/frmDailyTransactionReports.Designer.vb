@@ -126,7 +126,7 @@ Partial Class frmDailyTransactionReports
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(764, 20)
+        Me.barDockControlTop.Size = New System.Drawing.Size(766, 24)
         '
         'barDockControlBottom
         '
@@ -134,23 +134,23 @@ Partial Class frmDailyTransactionReports
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 564)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(764, 0)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(766, 0)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 20)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 24)
         Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 544)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 540)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(764, 20)
+        Me.barDockControlRight.Location = New System.Drawing.Point(766, 24)
         Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 544)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 540)
         '
         'DockManager1
         '
@@ -173,7 +173,7 @@ Partial Class frmDailyTransactionReports
         '
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainerControl1.Horizontal = False
-        Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 20)
+        Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 24)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.groupcode)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.spname)
@@ -187,7 +187,7 @@ Partial Class frmDailyTransactionReports
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.Em)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
-        Me.SplitContainerControl1.Size = New System.Drawing.Size(764, 544)
+        Me.SplitContainerControl1.Size = New System.Drawing.Size(766, 540)
         Me.SplitContainerControl1.SplitterPosition = 111
         Me.SplitContainerControl1.TabIndex = 11
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
@@ -306,7 +306,7 @@ Partial Class frmDailyTransactionReports
         Me.LabelControl3.Appearance.Options.UseFont = True
         Me.LabelControl3.Location = New System.Drawing.Point(27, 43)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(86, 13)
+        Me.LabelControl3.Size = New System.Drawing.Size(87, 13)
         Me.LabelControl3.TabIndex = 586
         Me.LabelControl3.Text = "Transaction Date"
         '
@@ -319,7 +319,7 @@ Partial Class frmDailyTransactionReports
         Me.Em.MainView = Me.GridView1
         Me.Em.Name = "Em"
         Me.Em.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemPictureEdit1})
-        Me.Em.Size = New System.Drawing.Size(764, 428)
+        Me.Em.Size = New System.Drawing.Size(766, 419)
         Me.Em.TabIndex = 5
         Me.Em.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -372,14 +372,13 @@ Partial Class frmDailyTransactionReports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(764, 564)
+        Me.ClientSize = New System.Drawing.Size(766, 564)
         Me.Controls.Add(Me.SplitContainerControl1)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.MinimumSize = New System.Drawing.Size(766, 481)
+        Me.MinimumSize = New System.Drawing.Size(764, 481)
         Me.Name = "frmDailyTransactionReports"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Daily Transaction Reports"

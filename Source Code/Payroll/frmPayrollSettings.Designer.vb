@@ -122,6 +122,7 @@ Partial Class frmPayrollSettings
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
         Me.barDockControlTop.Size = New System.Drawing.Size(550, 0)
         '
         'barDockControlBottom
@@ -129,6 +130,7 @@ Partial Class frmPayrollSettings
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 452)
+        Me.barDockControlBottom.Manager = Me.BarManager1
         Me.barDockControlBottom.Size = New System.Drawing.Size(550, 0)
         '
         'barDockControlLeft
@@ -136,6 +138,7 @@ Partial Class frmPayrollSettings
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
         Me.barDockControlLeft.Size = New System.Drawing.Size(0, 452)
         '
         'barDockControlRight
@@ -143,6 +146,7 @@ Partial Class frmPayrollSettings
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
         Me.barDockControlRight.Location = New System.Drawing.Point(550, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 452)
         '
         'BarButtonItem1
@@ -165,7 +169,7 @@ Partial Class frmPayrollSettings
         Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.NavBarItem1, Me.NavBarItem3})
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 0)
         Me.NavBarControl1.Name = "NavBarControl1"
-        Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 179
+        Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 148
         Me.NavBarControl1.Size = New System.Drawing.Size(148, 452)
         Me.NavBarControl1.TabIndex = 698
         Me.NavBarControl1.Text = "NavBarControl1"
@@ -181,35 +185,25 @@ Partial Class frmPayrollSettings
         '
         'NavBarItem3
         '
-        Me.NavBarItem3.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.NavBarItem3.Appearance.Options.UseFont = True
-        Me.NavBarItem3.AppearanceDisabled.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.NavBarItem3.AppearanceDisabled.Options.UseFont = True
-        Me.NavBarItem3.AppearanceHotTracked.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.NavBarItem3.AppearanceHotTracked.Options.UseFont = True
-        Me.NavBarItem3.AppearancePressed.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.NavBarItem3.AppearancePressed.Options.UseFont = True
         Me.NavBarItem3.Caption = "General Settings"
         Me.NavBarItem3.Name = "NavBarItem3"
         '
         'NavBarItem1
         '
-        Me.NavBarItem1.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.NavBarItem1.Appearance.Options.UseFont = True
-        Me.NavBarItem1.AppearanceDisabled.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.NavBarItem1.AppearanceDisabled.Options.UseFont = True
-        Me.NavBarItem1.AppearanceHotTracked.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.NavBarItem1.AppearanceHotTracked.Options.UseFont = True
-        Me.NavBarItem1.AppearancePressed.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.NavBarItem1.AppearancePressed.Options.UseFont = True
         Me.NavBarItem1.Caption = "Default Deductions"
         Me.NavBarItem1.Name = "NavBarItem1"
         '
         'XtraTabControl1
         '
-        Me.XtraTabControl1.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.XtraTabControl1.Appearance.Options.UseFont = True
-        Me.XtraTabControl1.AppearancePage.Header.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.XtraTabControl1.AppearancePage.Header.Options.UseFont = True
         Me.XtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.XtraTabControl1.Location = New System.Drawing.Point(148, 0)
@@ -237,12 +231,14 @@ Partial Class frmPayrollSettings
         Me.tabGeneralSettings.Controls.Add(Me.LabelControl7)
         Me.tabGeneralSettings.Controls.Add(Me.LabelControl5)
         Me.tabGeneralSettings.Name = "tabGeneralSettings"
-        Me.tabGeneralSettings.Size = New System.Drawing.Size(396, 446)
+        Me.tabGeneralSettings.Size = New System.Drawing.Size(400, 450)
         Me.tabGeneralSettings.Text = "General Setting"
         '
         'LabelControl3
         '
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl3.Appearance.Options.UseFont = True
+        Me.LabelControl3.Appearance.Options.UseTextOptions = True
         Me.LabelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl3.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -273,18 +269,22 @@ Partial Class frmPayrollSettings
         'LabelControl6
         '
         Me.LabelControl6.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl6.Appearance.Options.UseFont = True
+        Me.LabelControl6.Appearance.Options.UseTextOptions = True
         Me.LabelControl6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl6.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl6.Location = New System.Drawing.Point(54, 127)
         Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(158, 13)
+        Me.LabelControl6.Size = New System.Drawing.Size(159, 13)
         Me.LabelControl6.TabIndex = 752
         Me.LabelControl6.Text = "Total working minutes in a day"
         '
         'LabelControl13
         '
         Me.LabelControl13.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl13.Appearance.Options.UseFont = True
+        Me.LabelControl13.Appearance.Options.UseTextOptions = True
         Me.LabelControl13.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl13.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl13.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -314,18 +314,22 @@ Partial Class frmPayrollSettings
         'LabelControl14
         '
         Me.LabelControl14.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl14.Appearance.Options.UseFont = True
+        Me.LabelControl14.Appearance.Options.UseTextOptions = True
         Me.LabelControl14.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl14.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl14.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl14.Location = New System.Drawing.Point(54, 104)
         Me.LabelControl14.Name = "LabelControl14"
-        Me.LabelControl14.Size = New System.Drawing.Size(147, 13)
+        Me.LabelControl14.Size = New System.Drawing.Size(148, 13)
         Me.LabelControl14.TabIndex = 749
         Me.LabelControl14.Text = "Total working hours in a day"
         '
         'LabelControl10
         '
         Me.LabelControl10.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl10.Appearance.Options.UseFont = True
+        Me.LabelControl10.Appearance.Options.UseTextOptions = True
         Me.LabelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl10.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -355,12 +359,14 @@ Partial Class frmPayrollSettings
         'LabelControl11
         '
         Me.LabelControl11.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl11.Appearance.Options.UseFont = True
+        Me.LabelControl11.Appearance.Options.UseTextOptions = True
         Me.LabelControl11.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl11.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl11.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl11.Location = New System.Drawing.Point(54, 81)
         Me.LabelControl11.Name = "LabelControl11"
-        Me.LabelControl11.Size = New System.Drawing.Size(156, 13)
+        Me.LabelControl11.Size = New System.Drawing.Size(157, 13)
         Me.LabelControl11.TabIndex = 746
         Me.LabelControl11.Text = "Total working days in a month"
         '
@@ -378,6 +384,8 @@ Partial Class frmPayrollSettings
         'LabelControl8
         '
         Me.LabelControl8.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl8.Appearance.Options.UseFont = True
+        Me.LabelControl8.Appearance.Options.UseTextOptions = True
         Me.LabelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl8.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -407,18 +415,21 @@ Partial Class frmPayrollSettings
         'LabelControl7
         '
         Me.LabelControl7.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl7.Appearance.Options.UseFont = True
+        Me.LabelControl7.Appearance.Options.UseTextOptions = True
         Me.LabelControl7.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl7.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl7.Location = New System.Drawing.Point(54, 58)
         Me.LabelControl7.Name = "LabelControl7"
-        Me.LabelControl7.Size = New System.Drawing.Size(87, 13)
+        Me.LabelControl7.Size = New System.Drawing.Size(88, 13)
         Me.LabelControl7.TabIndex = 741
         Me.LabelControl7.Text = "Tax Computation"
         '
         'LabelControl5
         '
         Me.LabelControl5.Appearance.Font = New System.Drawing.Font("Century Gothic", 16.0!)
+        Me.LabelControl5.Appearance.Options.UseFont = True
         Me.LabelControl5.Location = New System.Drawing.Point(17, 10)
         Me.LabelControl5.Name = "LabelControl5"
         Me.LabelControl5.Size = New System.Drawing.Size(166, 24)
@@ -450,7 +461,7 @@ Partial Class frmPayrollSettings
         Me.tabDeductions.Controls.Add(Me.txtPhilHealthSched)
         Me.tabDeductions.Controls.Add(Me.txtSavingsSched)
         Me.tabDeductions.Name = "tabDeductions"
-        Me.tabDeductions.Size = New System.Drawing.Size(396, 446)
+        Me.tabDeductions.Size = New System.Drawing.Size(400, 450)
         Me.tabDeductions.Text = "Default Deductions"
         '
         'savingscode
@@ -458,7 +469,6 @@ Partial Class frmPayrollSettings
         Me.savingscode.EditValue = ""
         Me.savingscode.Location = New System.Drawing.Point(125, 145)
         Me.savingscode.Name = "savingscode"
-        Me.savingscode.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.savingscode.Properties.Appearance.Options.UseFont = True
         Me.savingscode.Properties.Appearance.Options.UseTextOptions = True
         Me.savingscode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -469,7 +479,7 @@ Partial Class frmPayrollSettings
         '
         'LabelControl15
         '
-        Me.LabelControl15.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.LabelControl15.Appearance.Options.UseTextOptions = True
         Me.LabelControl15.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl15.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl15.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -485,13 +495,12 @@ Partial Class frmPayrollSettings
         Me.txtDefaultSavings.Location = New System.Drawing.Point(179, 145)
         Me.txtDefaultSavings.MenuManager = Me.BarManager1
         Me.txtDefaultSavings.Name = "txtDefaultSavings"
-        Me.txtDefaultSavings.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtDefaultSavings.Properties.Appearance.Options.UseFont = True
         Me.txtDefaultSavings.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtDefaultSavings.Properties.DisplayMember = "Select"
         Me.txtDefaultSavings.Properties.NullText = ""
+        Me.txtDefaultSavings.Properties.PopupView = Me.gv_defaultSavings
         Me.txtDefaultSavings.Properties.ValueMember = "Select"
-        Me.txtDefaultSavings.Properties.View = Me.gv_defaultSavings
         Me.txtDefaultSavings.Size = New System.Drawing.Size(125, 20)
         Me.txtDefaultSavings.TabIndex = 735
         '
@@ -507,7 +516,6 @@ Partial Class frmPayrollSettings
         Me.philhealthcode.EditValue = ""
         Me.philhealthcode.Location = New System.Drawing.Point(125, 122)
         Me.philhealthcode.Name = "philhealthcode"
-        Me.philhealthcode.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.philhealthcode.Properties.Appearance.Options.UseFont = True
         Me.philhealthcode.Properties.Appearance.Options.UseTextOptions = True
         Me.philhealthcode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -521,7 +529,6 @@ Partial Class frmPayrollSettings
         Me.pagibigcode.EditValue = ""
         Me.pagibigcode.Location = New System.Drawing.Point(125, 98)
         Me.pagibigcode.Name = "pagibigcode"
-        Me.pagibigcode.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.pagibigcode.Properties.Appearance.Options.UseFont = True
         Me.pagibigcode.Properties.Appearance.Options.UseTextOptions = True
         Me.pagibigcode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -535,7 +542,6 @@ Partial Class frmPayrollSettings
         Me.gsiscode.EditValue = ""
         Me.gsiscode.Location = New System.Drawing.Point(125, 74)
         Me.gsiscode.Name = "gsiscode"
-        Me.gsiscode.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.gsiscode.Properties.Appearance.Options.UseFont = True
         Me.gsiscode.Properties.Appearance.Options.UseTextOptions = True
         Me.gsiscode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -546,7 +552,7 @@ Partial Class frmPayrollSettings
         '
         'LabelControl4
         '
-        Me.LabelControl4.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.LabelControl4.Appearance.Options.UseTextOptions = True
         Me.LabelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -562,13 +568,12 @@ Partial Class frmPayrollSettings
         Me.txtdefaultphilhealth.Location = New System.Drawing.Point(179, 122)
         Me.txtdefaultphilhealth.MenuManager = Me.BarManager1
         Me.txtdefaultphilhealth.Name = "txtdefaultphilhealth"
-        Me.txtdefaultphilhealth.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtdefaultphilhealth.Properties.Appearance.Options.UseFont = True
         Me.txtdefaultphilhealth.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtdefaultphilhealth.Properties.DisplayMember = "Select"
         Me.txtdefaultphilhealth.Properties.NullText = ""
+        Me.txtdefaultphilhealth.Properties.PopupView = Me.gv_defaultphilhealth
         Me.txtdefaultphilhealth.Properties.ValueMember = "Select"
-        Me.txtdefaultphilhealth.Properties.View = Me.gv_defaultphilhealth
         Me.txtdefaultphilhealth.Size = New System.Drawing.Size(125, 20)
         Me.txtdefaultphilhealth.TabIndex = 723
         '
@@ -581,7 +586,7 @@ Partial Class frmPayrollSettings
         '
         'LabelControl2
         '
-        Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.LabelControl2.Appearance.Options.UseTextOptions = True
         Me.LabelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -597,13 +602,12 @@ Partial Class frmPayrollSettings
         Me.txtdefaultpagibig.Location = New System.Drawing.Point(179, 98)
         Me.txtdefaultpagibig.MenuManager = Me.BarManager1
         Me.txtdefaultpagibig.Name = "txtdefaultpagibig"
-        Me.txtdefaultpagibig.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtdefaultpagibig.Properties.Appearance.Options.UseFont = True
         Me.txtdefaultpagibig.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtdefaultpagibig.Properties.DisplayMember = "Select"
         Me.txtdefaultpagibig.Properties.NullText = ""
+        Me.txtdefaultpagibig.Properties.PopupView = Me.gv_defaultpagibig
         Me.txtdefaultpagibig.Properties.ValueMember = "Select"
-        Me.txtdefaultpagibig.Properties.View = Me.gv_defaultpagibig
         Me.txtdefaultpagibig.Size = New System.Drawing.Size(125, 20)
         Me.txtdefaultpagibig.TabIndex = 721
         '
@@ -616,7 +620,7 @@ Partial Class frmPayrollSettings
         '
         'LabelControl1
         '
-        Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.LabelControl1.Appearance.Options.UseTextOptions = True
         Me.LabelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -632,13 +636,12 @@ Partial Class frmPayrollSettings
         Me.txtdefaultgsis.Location = New System.Drawing.Point(179, 74)
         Me.txtdefaultgsis.MenuManager = Me.BarManager1
         Me.txtdefaultgsis.Name = "txtdefaultgsis"
-        Me.txtdefaultgsis.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtdefaultgsis.Properties.Appearance.Options.UseFont = True
         Me.txtdefaultgsis.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtdefaultgsis.Properties.DisplayMember = "Select"
         Me.txtdefaultgsis.Properties.NullText = ""
+        Me.txtdefaultgsis.Properties.PopupView = Me.gv_defaultGsis
         Me.txtdefaultgsis.Properties.ValueMember = "Select"
-        Me.txtdefaultgsis.Properties.View = Me.gv_defaultGsis
         Me.txtdefaultgsis.Size = New System.Drawing.Size(125, 20)
         Me.txtdefaultgsis.TabIndex = 719
         '
@@ -651,13 +654,13 @@ Partial Class frmPayrollSettings
         '
         'LabelControl12
         '
-        Me.LabelControl12.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.LabelControl12.Appearance.Options.UseTextOptions = True
         Me.LabelControl12.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl12.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl12.Location = New System.Drawing.Point(58, 53)
         Me.LabelControl12.Name = "LabelControl12"
-        Me.LabelControl12.Size = New System.Drawing.Size(59, 13)
+        Me.LabelControl12.Size = New System.Drawing.Size(60, 13)
         Me.LabelControl12.TabIndex = 718
         Me.LabelControl12.Text = "Default TAX"
         '
@@ -667,13 +670,12 @@ Partial Class frmPayrollSettings
         Me.txtdefaulttax.Location = New System.Drawing.Point(179, 50)
         Me.txtdefaulttax.MenuManager = Me.BarManager1
         Me.txtdefaulttax.Name = "txtdefaulttax"
-        Me.txtdefaulttax.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtdefaulttax.Properties.Appearance.Options.UseFont = True
         Me.txtdefaulttax.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtdefaulttax.Properties.DisplayMember = "Select"
         Me.txtdefaulttax.Properties.NullText = ""
+        Me.txtdefaulttax.Properties.PopupView = Me.gv_defaulttax
         Me.txtdefaulttax.Properties.ValueMember = "Select"
-        Me.txtdefaulttax.Properties.View = Me.gv_defaulttax
         Me.txtdefaulttax.Size = New System.Drawing.Size(125, 20)
         Me.txtdefaulttax.TabIndex = 717
         '
@@ -686,7 +688,6 @@ Partial Class frmPayrollSettings
         '
         'cdmSaveDeduction
         '
-        Me.cdmSaveDeduction.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.cdmSaveDeduction.Appearance.Options.UseFont = True
         Me.cdmSaveDeduction.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.cdmSaveDeduction.Location = New System.Drawing.Point(179, 169)
@@ -698,6 +699,7 @@ Partial Class frmPayrollSettings
         'LabelControl9
         '
         Me.LabelControl9.Appearance.Font = New System.Drawing.Font("Century Gothic", 16.0!)
+        Me.LabelControl9.Appearance.Options.UseFont = True
         Me.LabelControl9.Location = New System.Drawing.Point(17, 10)
         Me.LabelControl9.Name = "LabelControl9"
         Me.LabelControl9.Size = New System.Drawing.Size(198, 24)
@@ -709,7 +711,6 @@ Partial Class frmPayrollSettings
         Me.taxcode.EditValue = ""
         Me.taxcode.Location = New System.Drawing.Point(125, 50)
         Me.taxcode.Name = "taxcode"
-        Me.taxcode.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.taxcode.Properties.Appearance.Options.UseFont = True
         Me.taxcode.Properties.Appearance.Options.UseTextOptions = True
         Me.taxcode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -723,7 +724,6 @@ Partial Class frmPayrollSettings
         Me.txtTaxSched.EditValue = "31"
         Me.txtTaxSched.Location = New System.Drawing.Point(308, 50)
         Me.txtTaxSched.Name = "txtTaxSched"
-        Me.txtTaxSched.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtTaxSched.Properties.Appearance.Options.UseFont = True
         Me.txtTaxSched.Properties.Appearance.Options.UseTextOptions = True
         Me.txtTaxSched.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -739,7 +739,6 @@ Partial Class frmPayrollSettings
         Me.txtSSSSched.EditValue = "31"
         Me.txtSSSSched.Location = New System.Drawing.Point(308, 74)
         Me.txtSSSSched.Name = "txtSSSSched"
-        Me.txtSSSSched.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtSSSSched.Properties.Appearance.Options.UseFont = True
         Me.txtSSSSched.Properties.Appearance.Options.UseTextOptions = True
         Me.txtSSSSched.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -755,7 +754,6 @@ Partial Class frmPayrollSettings
         Me.txtPagibigSched.EditValue = "31"
         Me.txtPagibigSched.Location = New System.Drawing.Point(308, 98)
         Me.txtPagibigSched.Name = "txtPagibigSched"
-        Me.txtPagibigSched.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtPagibigSched.Properties.Appearance.Options.UseFont = True
         Me.txtPagibigSched.Properties.Appearance.Options.UseTextOptions = True
         Me.txtPagibigSched.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -771,7 +769,6 @@ Partial Class frmPayrollSettings
         Me.txtPhilHealthSched.EditValue = "31"
         Me.txtPhilHealthSched.Location = New System.Drawing.Point(308, 122)
         Me.txtPhilHealthSched.Name = "txtPhilHealthSched"
-        Me.txtPhilHealthSched.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtPhilHealthSched.Properties.Appearance.Options.UseFont = True
         Me.txtPhilHealthSched.Properties.Appearance.Options.UseTextOptions = True
         Me.txtPhilHealthSched.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -787,7 +784,6 @@ Partial Class frmPayrollSettings
         Me.txtSavingsSched.EditValue = "31"
         Me.txtSavingsSched.Location = New System.Drawing.Point(308, 145)
         Me.txtSavingsSched.Name = "txtSavingsSched"
-        Me.txtSavingsSched.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.txtSavingsSched.Properties.Appearance.Options.UseFont = True
         Me.txtSavingsSched.Properties.Appearance.Options.UseTextOptions = True
         Me.txtSavingsSched.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center

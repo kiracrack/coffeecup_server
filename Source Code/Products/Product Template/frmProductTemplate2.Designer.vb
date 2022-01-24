@@ -60,6 +60,7 @@ Partial Class frmProductTemplate2
         Me.tabInformation = New DevExpress.XtraTab.XtraTabPage()
         Me.cmdBaselineUnit = New DevExpress.XtraEditors.HyperlinkLabelControl()
         Me.panelSale = New DevExpress.XtraEditors.GroupControl()
+        Me.ckComputeLength = New DevExpress.XtraEditors.CheckEdit()
         Me.cmdEditItem = New DevExpress.XtraEditors.SimpleButton()
         Me.subcatid = New DevExpress.XtraEditors.TextEdit()
         Me.HyperlinkLabelControl2 = New DevExpress.XtraEditors.HyperlinkLabelControl()
@@ -75,7 +76,6 @@ Partial Class frmProductTemplate2
         Me.combogrid = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.tabImage = New DevExpress.XtraTab.XtraTabPage()
         Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
-        Me.ckComputeLength = New DevExpress.XtraEditors.CheckEdit()
         CType(Me.productid.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.catid.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +104,7 @@ Partial Class frmProductTemplate2
         Me.tabInformation.SuspendLayout()
         CType(Me.panelSale, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelSale.SuspendLayout()
+        CType(Me.ckComputeLength.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.subcatid.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtSubCategory.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridsubcategory, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,7 +114,6 @@ Partial Class frmProductTemplate2
         CType(Me.combogrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabImage.SuspendLayout()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ckComputeLength.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'productid
@@ -331,7 +331,6 @@ Partial Class frmProductTemplate2
         '
         'ckServiceCharge
         '
-        Me.ckServiceCharge.EditValue = True
         Me.ckServiceCharge.Location = New System.Drawing.Point(91, 93)
         Me.ckServiceCharge.Name = "ckServiceCharge"
         Me.ckServiceCharge.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -342,7 +341,6 @@ Partial Class frmProductTemplate2
         '
         'ckVatEnable
         '
-        Me.ckVatEnable.EditValue = True
         Me.ckVatEnable.Location = New System.Drawing.Point(91, 73)
         Me.ckVatEnable.Name = "ckVatEnable"
         Me.ckVatEnable.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -625,6 +623,16 @@ Partial Class frmProductTemplate2
         Me.panelSale.TabIndex = 715
         Me.panelSale.Text = "Product Sale Configuration"
         '
+        'ckComputeLength
+        '
+        Me.ckComputeLength.Location = New System.Drawing.Point(91, 194)
+        Me.ckComputeLength.Name = "ckComputeLength"
+        Me.ckComputeLength.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckComputeLength.Properties.Appearance.Options.UseFont = True
+        Me.ckComputeLength.Properties.Caption = "Enable Compute Length"
+        Me.ckComputeLength.Size = New System.Drawing.Size(164, 20)
+        Me.ckComputeLength.TabIndex = 722
+        '
         'cmdEditItem
         '
         Me.cmdEditItem.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -772,7 +780,7 @@ Partial Class frmProductTemplate2
         '
         Me.tabImage.Controls.Add(Me.PictureEdit1)
         Me.tabImage.Name = "tabImage"
-        Me.tabImage.Size = New System.Drawing.Size(799, 525)
+        Me.tabImage.Size = New System.Drawing.Size(799, 543)
         Me.tabImage.Text = "Product Featured Image"
         '
         'PictureEdit1
@@ -781,18 +789,8 @@ Partial Class frmProductTemplate2
         Me.PictureEdit1.Location = New System.Drawing.Point(0, 0)
         Me.PictureEdit1.Name = "PictureEdit1"
         Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
-        Me.PictureEdit1.Size = New System.Drawing.Size(799, 525)
+        Me.PictureEdit1.Size = New System.Drawing.Size(799, 543)
         Me.PictureEdit1.TabIndex = 0
-        '
-        'ckComputeLength
-        '
-        Me.ckComputeLength.Location = New System.Drawing.Point(91, 194)
-        Me.ckComputeLength.Name = "ckComputeLength"
-        Me.ckComputeLength.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ckComputeLength.Properties.Appearance.Options.UseFont = True
-        Me.ckComputeLength.Properties.Caption = "Enable Compute Length"
-        Me.ckComputeLength.Size = New System.Drawing.Size(164, 20)
-        Me.ckComputeLength.TabIndex = 722
         '
         'frmProductTemplate2
         '
@@ -841,6 +839,7 @@ Partial Class frmProductTemplate2
         CType(Me.panelSale, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelSale.ResumeLayout(False)
         Me.panelSale.PerformLayout()
+        CType(Me.ckComputeLength.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.subcatid.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtSubCategory.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridsubcategory, System.ComponentModel.ISupportInitialize).EndInit()
@@ -850,7 +849,6 @@ Partial Class frmProductTemplate2
         CType(Me.combogrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabImage.ResumeLayout(False)
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ckComputeLength.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -320,7 +320,7 @@ Partial Class frmCompanies
         Me.LabelControl2.Appearance.Options.UseFont = True
         Me.LabelControl2.Location = New System.Drawing.Point(117, 92)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(126, 15)
+        Me.LabelControl2.Size = New System.Drawing.Size(125, 15)
         Me.LabelControl2.TabIndex = 734
         Me.LabelControl2.Text = "Due From Account Title"
         '
@@ -330,7 +330,7 @@ Partial Class frmCompanies
         Me.LabelControl3.Appearance.Options.UseFont = True
         Me.LabelControl3.Location = New System.Drawing.Point(131, 66)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(112, 15)
+        Me.LabelControl3.Size = New System.Drawing.Size(110, 15)
         Me.LabelControl3.TabIndex = 740
         Me.LabelControl3.Text = "Due To Account Title"
         '

@@ -118,12 +118,14 @@ Partial Class frmPayrollShiftSettings
         'LabelControl63
         '
         Me.LabelControl63.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl63.Appearance.Options.UseFont = True
+        Me.LabelControl63.Appearance.Options.UseTextOptions = True
         Me.LabelControl63.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl63.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl63.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl63.Location = New System.Drawing.Point(69, 242)
         Me.LabelControl63.Name = "LabelControl63"
-        Me.LabelControl63.Size = New System.Drawing.Size(59, 13)
+        Me.LabelControl63.Size = New System.Drawing.Size(60, 13)
         Me.LabelControl63.TabIndex = 640
         Me.LabelControl63.Text = "Total Hours"
         '
@@ -141,24 +143,28 @@ Partial Class frmPayrollShiftSettings
         'LabelControl56
         '
         Me.LabelControl56.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl56.Appearance.Options.UseFont = True
+        Me.LabelControl56.Appearance.Options.UseTextOptions = True
         Me.LabelControl56.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl56.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl56.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl56.Location = New System.Drawing.Point(82, 218)
         Me.LabelControl56.Name = "LabelControl56"
-        Me.LabelControl56.Size = New System.Drawing.Size(46, 13)
+        Me.LabelControl56.Size = New System.Drawing.Size(47, 13)
         Me.LabelControl56.TabIndex = 636
         Me.LabelControl56.Text = "Time Out"
         '
         'LabelControl53
         '
         Me.LabelControl53.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl53.Appearance.Options.UseFont = True
+        Me.LabelControl53.Appearance.Options.UseTextOptions = True
         Me.LabelControl53.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl53.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl53.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl53.Location = New System.Drawing.Point(82, 129)
         Me.LabelControl53.Name = "LabelControl53"
-        Me.LabelControl53.Size = New System.Drawing.Size(46, 13)
+        Me.LabelControl53.Size = New System.Drawing.Size(47, 13)
         Me.LabelControl53.TabIndex = 637
         Me.LabelControl53.Text = "Time Out"
         '
@@ -193,24 +199,28 @@ Partial Class frmPayrollShiftSettings
         'LabelControl55
         '
         Me.LabelControl55.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl55.Appearance.Options.UseFont = True
+        Me.LabelControl55.Appearance.Options.UseTextOptions = True
         Me.LabelControl55.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl55.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl55.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl55.Location = New System.Drawing.Point(92, 195)
         Me.LabelControl55.Name = "LabelControl55"
-        Me.LabelControl55.Size = New System.Drawing.Size(36, 13)
+        Me.LabelControl55.Size = New System.Drawing.Size(37, 13)
         Me.LabelControl55.TabIndex = 632
         Me.LabelControl55.Text = "Time In"
         '
         'LabelControl52
         '
         Me.LabelControl52.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl52.Appearance.Options.UseFont = True
+        Me.LabelControl52.Appearance.Options.UseTextOptions = True
         Me.LabelControl52.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl52.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl52.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl52.Location = New System.Drawing.Point(92, 106)
         Me.LabelControl52.Name = "LabelControl52"
-        Me.LabelControl52.Size = New System.Drawing.Size(36, 13)
+        Me.LabelControl52.Size = New System.Drawing.Size(37, 13)
         Me.LabelControl52.TabIndex = 633
         Me.LabelControl52.Text = "Time In"
         '
@@ -231,6 +241,8 @@ Partial Class frmPayrollShiftSettings
         'LabelControl54
         '
         Me.LabelControl54.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl54.Appearance.Options.UseFont = True
+        Me.LabelControl54.Appearance.Options.UseTextOptions = True
         Me.LabelControl54.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl54.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl54.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -257,6 +269,8 @@ Partial Class frmPayrollShiftSettings
         'LabelControl51
         '
         Me.LabelControl51.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl51.Appearance.Options.UseFont = True
+        Me.LabelControl51.Appearance.Options.UseTextOptions = True
         Me.LabelControl51.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl51.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl51.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -269,6 +283,8 @@ Partial Class frmPayrollShiftSettings
         'LabelControl12
         '
         Me.LabelControl12.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl12.Appearance.Options.UseFont = True
+        Me.LabelControl12.Appearance.Options.UseTextOptions = True
         Me.LabelControl12.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl12.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -281,6 +297,7 @@ Partial Class frmPayrollShiftSettings
         'LabelControl9
         '
         Me.LabelControl9.Appearance.Font = New System.Drawing.Font("Century Gothic", 16.0!)
+        Me.LabelControl9.Appearance.Options.UseFont = True
         Me.LabelControl9.Location = New System.Drawing.Point(13, 12)
         Me.LabelControl9.Name = "LabelControl9"
         Me.LabelControl9.Size = New System.Drawing.Size(122, 24)
@@ -344,7 +361,7 @@ Partial Class frmPayrollShiftSettings
         Me.ckFlexiBreakTime.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckFlexiBreakTime.Properties.Appearance.Options.UseFont = True
         Me.ckFlexiBreakTime.Properties.Caption = "Flexi Break Time"
-        Me.ckFlexiBreakTime.Size = New System.Drawing.Size(109, 19)
+        Me.ckFlexiBreakTime.Size = New System.Drawing.Size(109, 20)
         Me.ckFlexiBreakTime.TabIndex = 767
         '
         'ckFlexiAllTime
@@ -354,7 +371,7 @@ Partial Class frmPayrollShiftSettings
         Me.ckFlexiAllTime.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckFlexiAllTime.Properties.Appearance.Options.UseFont = True
         Me.ckFlexiAllTime.Properties.Caption = "Flexi All Time"
-        Me.ckFlexiAllTime.Size = New System.Drawing.Size(109, 19)
+        Me.ckFlexiAllTime.Size = New System.Drawing.Size(109, 20)
         Me.ckFlexiAllTime.TabIndex = 768
         '
         'ckOnetimeInout
@@ -364,7 +381,7 @@ Partial Class frmPayrollShiftSettings
         Me.ckOnetimeInout.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckOnetimeInout.Properties.Appearance.Options.UseFont = True
         Me.ckOnetimeInout.Properties.Caption = "One time IN and OUT Attendance"
-        Me.ckOnetimeInout.Size = New System.Drawing.Size(193, 19)
+        Me.ckOnetimeInout.Size = New System.Drawing.Size(193, 20)
         Me.ckOnetimeInout.TabIndex = 769
         '
         'frmPayrollShiftSettings

@@ -42,6 +42,8 @@ Partial Class frmPayrollLoadAttendanceNotFound
         'lblDescription
         '
         Me.lblDescription.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescription.Appearance.Options.UseFont = True
+        Me.lblDescription.Appearance.Options.UseTextOptions = True
         Me.lblDescription.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.lblDescription.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.lblDescription.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
@@ -77,7 +79,6 @@ Partial Class frmPayrollLoadAttendanceNotFound
         Me.cmdCreate.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdCreate.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.cmdCreate.Appearance.BackColor2 = System.Drawing.Color.Khaki
-        Me.cmdCreate.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.cmdCreate.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.cmdCreate.Appearance.Options.UseBackColor = True
         Me.cmdCreate.Appearance.Options.UseFont = True
@@ -121,19 +122,19 @@ Partial Class frmPayrollLoadAttendanceNotFound
         '
         'LabelControl2
         '
-        Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.LabelControl2.Appearance.Options.UseTextOptions = True
         Me.LabelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl2.Location = New System.Drawing.Point(168, 30)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(12, 13)
+        Me.LabelControl2.Size = New System.Drawing.Size(13, 13)
         Me.LabelControl2.TabIndex = 809
         Me.LabelControl2.Text = "To"
         '
         'LabelControl1
         '
-        Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.LabelControl1.Appearance.Options.UseTextOptions = True
         Me.LabelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.LabelControl1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.LabelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal

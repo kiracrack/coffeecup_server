@@ -272,7 +272,7 @@ Partial Class frmStatementOfAccount
         Me.LabelControl4.Appearance.Options.UseFont = True
         Me.LabelControl4.Location = New System.Drawing.Point(988, 13)
         Me.LabelControl4.Name = "LabelControl4"
-        Me.LabelControl4.Size = New System.Drawing.Size(82, 13)
+        Me.LabelControl4.Size = New System.Drawing.Size(81, 13)
         Me.LabelControl4.TabIndex = 701
         Me.LabelControl4.Text = "Current Balance"
         '
@@ -298,7 +298,7 @@ Partial Class frmStatementOfAccount
         Me.LabelControl1.Appearance.Options.UseFont = True
         Me.LabelControl1.Location = New System.Drawing.Point(843, 13)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(65, 13)
+        Me.LabelControl1.Size = New System.Drawing.Size(66, 13)
         Me.LabelControl1.TabIndex = 699
         Me.LabelControl1.Text = "Total Charge"
         '
@@ -324,7 +324,7 @@ Partial Class frmStatementOfAccount
         Me.lblTotalPurchase.Appearance.Options.UseFont = True
         Me.lblTotalPurchase.Location = New System.Drawing.Point(698, 13)
         Me.lblTotalPurchase.Name = "lblTotalPurchase"
-        Me.lblTotalPurchase.Size = New System.Drawing.Size(71, 13)
+        Me.lblTotalPurchase.Size = New System.Drawing.Size(72, 13)
         Me.lblTotalPurchase.TabIndex = 697
         Me.lblTotalPurchase.Text = "Total Payment"
         '

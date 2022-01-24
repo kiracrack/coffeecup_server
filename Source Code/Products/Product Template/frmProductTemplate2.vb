@@ -52,7 +52,7 @@ Public Class frmProductTemplate2
             txtUnit.Focus()
         Else
             txtSubCategory.Focus()
-            txtSubCategory.ShowPopup()
+            'txtSubCategory.ShowPopup()
         End If
     End Sub
 
@@ -342,11 +342,11 @@ Public Class frmProductTemplate2
     End Sub
 
     Private Sub txtprocat_GotFocus(sender As Object, e As EventArgs) Handles txtprocat.GotFocus
-        txtprocat.ShowPopup()
+        'txtprocat.ShowPopup()
     End Sub
      
     Private Sub txtUnit_GotFocus(sender As Object, e As EventArgs) Handles txtUnit.GotFocus
-        txtUnit.ShowPopup()
+        'txtUnit.ShowPopup()
     End Sub
 
     Private Sub txtUnit_SelectedValueChanged(sender As Object, e As EventArgs) Handles txtUnit.SelectedValueChanged
