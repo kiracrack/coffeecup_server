@@ -72,7 +72,7 @@ Partial Class frmProductTemplate2
         Me.LabelControl14 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
         Me.txtReorderPoint = New DevExpress.XtraEditors.TextEdit()
-        Me.txtprocat = New DevExpress.XtraEditors.SearchLookUpEdit()
+        Me.txtCategory = New DevExpress.XtraEditors.SearchLookUpEdit()
         Me.combogrid = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.tabImage = New DevExpress.XtraTab.XtraTabPage()
         Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
@@ -110,7 +110,7 @@ Partial Class frmProductTemplate2
         CType(Me.gridsubcategory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDescription.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtReorderPoint.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtprocat.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtCategory.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.combogrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabImage.SuspendLayout()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -580,7 +580,7 @@ Partial Class frmProductTemplate2
         Me.tabInformation.Controls.Add(Me.LabelControl2)
         Me.tabInformation.Controls.Add(Me.LabelControl7)
         Me.tabInformation.Controls.Add(Me.LabelControl8)
-        Me.tabInformation.Controls.Add(Me.txtprocat)
+        Me.tabInformation.Controls.Add(Me.txtCategory)
         Me.tabInformation.Controls.Add(Me.LabelControl4)
         Me.tabInformation.Name = "tabInformation"
         Me.tabInformation.Size = New System.Drawing.Size(799, 543)
@@ -754,20 +754,20 @@ Partial Class frmProductTemplate2
         Me.txtReorderPoint.Size = New System.Drawing.Size(140, 26)
         Me.txtReorderPoint.TabIndex = 4
         '
-        'txtprocat
+        'txtCategory
         '
-        Me.txtprocat.EditValue = ""
-        Me.txtprocat.Location = New System.Drawing.Point(124, 171)
-        Me.txtprocat.Name = "txtprocat"
-        Me.txtprocat.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.txtprocat.Properties.Appearance.Options.UseFont = True
-        Me.txtprocat.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.txtprocat.Properties.DisplayMember = "Select Category"
-        Me.txtprocat.Properties.NullText = ""
-        Me.txtprocat.Properties.PopupView = Me.combogrid
-        Me.txtprocat.Properties.ValueMember = "catid"
-        Me.txtprocat.Size = New System.Drawing.Size(289, 22)
-        Me.txtprocat.TabIndex = 2
+        Me.txtCategory.EditValue = ""
+        Me.txtCategory.Location = New System.Drawing.Point(124, 171)
+        Me.txtCategory.Name = "txtCategory"
+        Me.txtCategory.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.txtCategory.Properties.Appearance.Options.UseFont = True
+        Me.txtCategory.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtCategory.Properties.DisplayMember = "Select Category"
+        Me.txtCategory.Properties.NullText = ""
+        Me.txtCategory.Properties.PopupView = Me.combogrid
+        Me.txtCategory.Properties.ValueMember = "catid"
+        Me.txtCategory.Size = New System.Drawing.Size(289, 22)
+        Me.txtCategory.TabIndex = 2
         '
         'combogrid
         '
@@ -845,7 +845,7 @@ Partial Class frmProductTemplate2
         CType(Me.gridsubcategory, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDescription.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtReorderPoint.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtprocat.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtCategory.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.combogrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabImage.ResumeLayout(False)
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -893,7 +893,7 @@ Partial Class frmProductTemplate2
     Friend WithEvents tabInformation As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents tabImage As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents PictureEdit1 As DevExpress.XtraEditors.PictureEdit
-    Friend WithEvents txtprocat As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents txtCategory As DevExpress.XtraEditors.SearchLookUpEdit
     Friend WithEvents combogrid As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents txtReorderPoint As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl6 As DevExpress.XtraEditors.LabelControl

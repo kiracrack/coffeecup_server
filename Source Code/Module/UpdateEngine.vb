@@ -3163,6 +3163,11 @@ Module UpdateEngine
             engineupdated = True
         End If
 
+        updateVersion = "2022-01-31"
+        If CBool(qrysingledata("proceedupdate", " if(date_format(databaseversion, '%Y-%m-%d') < '" & updateVersion & "',true,false) as proceedupdate", "tbldatabaseupdatelogs order by databaseversion desc limit 1")) = True Then
+            com.CommandText = "ALTER TABLE `tblclientaccounts` ADD COLUMN `codename` VARCHAR(100) NOT NULL DEFAULT '' AFTER `compadd`;" : com.ExecuteNonQuery() : DatabaseUpdateLogs(updateVersion, rchar(com.CommandText.ToCharArray))
+            engineupdated = True
+        End If
 
         Dim fileSystemInfo As System.IO.FileSystemInfo
         Dim sourceDirectoryInfo As New System.IO.DirectoryInfo(Application.StartupPath.ToString)

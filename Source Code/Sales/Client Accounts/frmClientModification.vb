@@ -39,7 +39,7 @@ Public Class frmClientModification
                     Exit Sub
                 End If
                 If XtraMessageBox.Show("Are you sure you want to Continue?", compname, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
-                    com.CommandText = "insert into tblclientaccounts set cifid='" & id.Text & "', groupcode='" & groupcode.Text & "', COMPANYNAME='" & txtCompanyName.Text & "', COMPADD='" & StrConv(txtadd.Text, vbProperCase) & "', TELEPHONE='" & txttell.Text & "', " & If(CDate(txtBirthdate.EditValue).ToShortDateString = CDate(Now.ToShortDateString), "", " birthdate='" & ConvertDate(txtBirthdate.EditValue) & "', ") & " emailadd='" & txtEmail.Text & "',  entryby='" & globaluserid & "',dateentered=current_timestamp,enabledue=" & ckClientDue.CheckState & ",duetype='" & txtDueType.Text & "',duevalue='" & txtDueValue.Text & "', creditlimit=" & ckCrditLimit.CheckState & ", creditlimitamount='" & Val(CC(txtCreditLimit.Text)) & "',skipdiscount=" & ckSkipDiscount.CheckState & ", approved=1, approvedby='" & globaluserid & "',vip='" & ckvip.CheckState & "', vipguestid='" & guestid.Text & "' " : com.ExecuteNonQuery()
+                    com.CommandText = "insert into tblclientaccounts set cifid='" & id.Text & "', groupcode='" & groupcode.Text & "', COMPANYNAME='" & txtCompanyName.Text & "', COMPADD='" & StrConv(txtadd.Text, vbProperCase) & "', codename='" & rchar(txtCodeName.Text) & "', TELEPHONE='" & txttell.Text & "', " & If(CDate(txtBirthdate.EditValue).ToShortDateString = CDate(Now.ToShortDateString), "", " birthdate='" & ConvertDate(txtBirthdate.EditValue) & "', ") & " emailadd='" & txtEmail.Text & "',  entryby='" & globaluserid & "',dateentered=current_timestamp,enabledue=" & ckClientDue.CheckState & ",duetype='" & txtDueType.Text & "',duevalue='" & txtDueValue.Text & "', creditlimit=" & ckCrditLimit.CheckState & ", creditlimitamount='" & Val(CC(txtCreditLimit.Text)) & "',skipdiscount=" & ckSkipDiscount.CheckState & ", approved=1, approvedby='" & globaluserid & "',vip='" & ckvip.CheckState & "', vipguestid='" & guestid.Text & "' " : com.ExecuteNonQuery()
                     XtraMessageBox.Show("Client Successfully Saved", compname, MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
                     Exit Sub
@@ -63,7 +63,7 @@ Public Class frmClientModification
                     Exit Sub
                 End If
                 If XtraMessageBox.Show("Are you sure you want to Continue?", compname, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
-                    com.CommandText = "update tblclientaccounts set  groupcode='" & groupcode.Text & "', COMPANYNAME='" & txtCompanyName.Text & "', COMPADD='" & StrConv(txtadd.Text, vbProperCase) & "', TELEPHONE='" & txttell.Text & "', " & If(CDate(txtBirthdate.EditValue).ToShortDateString = CDate(Now.ToShortDateString), "", " birthdate='" & ConvertDate(txtBirthdate.EditValue) & "', ") & " emailadd='" & txtEmail.Text & "', entryby='" & globaluserid & "',dateentered=current_timestamp,enabledue=" & ckClientDue.CheckState & ",duetype='" & txtDueType.Text & "',duevalue='" & txtDueValue.Text & "', creditlimit=" & ckCrditLimit.CheckState & ", creditlimitamount='" & Val(CC(txtCreditLimit.Text)) & "',skipdiscount=" & ckSkipDiscount.CheckState & ",vip='" & ckvip.CheckState & "', vipguestid='" & guestid.Text & "' where cifid='" & id.Text & "'" : com.ExecuteNonQuery()
+                    com.CommandText = "update tblclientaccounts set  groupcode='" & groupcode.Text & "', COMPANYNAME='" & txtCompanyName.Text & "', COMPADD='" & StrConv(txtadd.Text, vbProperCase) & "', codename='" & rchar(txtCodeName.Text) & "', TELEPHONE='" & txttell.Text & "', " & If(CDate(txtBirthdate.EditValue).ToShortDateString = CDate(Now.ToShortDateString), "", " birthdate='" & ConvertDate(txtBirthdate.EditValue) & "', ") & " emailadd='" & txtEmail.Text & "', entryby='" & globaluserid & "',dateentered=current_timestamp,enabledue=" & ckClientDue.CheckState & ",duetype='" & txtDueType.Text & "',duevalue='" & txtDueValue.Text & "', creditlimit=" & ckCrditLimit.CheckState & ", creditlimitamount='" & Val(CC(txtCreditLimit.Text)) & "',skipdiscount=" & ckSkipDiscount.CheckState & ",vip='" & ckvip.CheckState & "', vipguestid='" & guestid.Text & "' where cifid='" & id.Text & "'" : com.ExecuteNonQuery()
                     XtraMessageBox.Show("Client Successfully Updated", compname, MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
                     Exit Sub
@@ -101,6 +101,7 @@ Public Class frmClientModification
                 txtCompanyName.Text = rst("COMPANYNAME").ToString
                 txtadd.Text = rst("COMPADD").ToString
                 txttell.Text = rst("TELEPHONE").ToString
+                txtCodeName.Text = rst("codename").ToString
 
                 If rst("birthdate").ToString <> "" Then
                     txtBirthdate.EditValue = rst("birthdate").ToString

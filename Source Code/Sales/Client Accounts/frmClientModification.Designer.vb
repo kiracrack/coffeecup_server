@@ -52,6 +52,8 @@ Partial Class frmClientModification
         Me.txtVIPGuest = New DevExpress.XtraEditors.SearchLookUpEdit()
         Me.gvVipGuest = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.guestid = New DevExpress.XtraEditors.TextEdit()
+        Me.txtCodeName = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.id.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCompanyName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txttell.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +75,7 @@ Partial Class frmClientModification
         CType(Me.txtVIPGuest.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gvVipGuest, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.guestid.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtCodeName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'id
@@ -122,7 +125,7 @@ Partial Class frmClientModification
         'LabelControl7
         '
         Me.LabelControl7.Appearance.Options.UseFont = True
-        Me.LabelControl7.Location = New System.Drawing.Point(69, 104)
+        Me.LabelControl7.Location = New System.Drawing.Point(69, 125)
         Me.LabelControl7.Name = "LabelControl7"
         Me.LabelControl7.Size = New System.Drawing.Size(63, 13)
         Me.LabelControl7.TabIndex = 394
@@ -140,7 +143,7 @@ Partial Class frmClientModification
         'txttell
         '
         Me.txttell.EnterMoveNextControl = True
-        Me.txttell.Location = New System.Drawing.Point(142, 101)
+        Me.txttell.Location = New System.Drawing.Point(142, 122)
         Me.txttell.Name = "txttell"
         Me.txttell.Properties.Appearance.Options.UseFont = True
         Me.txttell.Size = New System.Drawing.Size(260, 20)
@@ -159,7 +162,7 @@ Partial Class frmClientModification
         'SimpleButton1
         '
         Me.SimpleButton1.Appearance.Options.UseFont = True
-        Me.SimpleButton1.Location = New System.Drawing.Point(267, 358)
+        Me.SimpleButton1.Location = New System.Drawing.Point(267, 378)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(85, 26)
         Me.SimpleButton1.TabIndex = 10
@@ -181,7 +184,7 @@ Partial Class frmClientModification
         '
         Me.cmdSave.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.cmdSave.Appearance.Options.UseFont = True
-        Me.cmdSave.Location = New System.Drawing.Point(142, 358)
+        Me.cmdSave.Location = New System.Drawing.Point(142, 378)
         Me.cmdSave.Name = "cmdSave"
         Me.cmdSave.Size = New System.Drawing.Size(119, 26)
         Me.cmdSave.TabIndex = 9
@@ -198,16 +201,16 @@ Partial Class frmClientModification
         'LabelControl10
         '
         Me.LabelControl10.Appearance.Options.UseFont = True
-        Me.LabelControl10.Location = New System.Drawing.Point(85, 219)
+        Me.LabelControl10.Location = New System.Drawing.Point(80, 239)
         Me.LabelControl10.Name = "LabelControl10"
-        Me.LabelControl10.Size = New System.Drawing.Size(50, 13)
+        Me.LabelControl10.Size = New System.Drawing.Size(52, 13)
         Me.LabelControl10.TabIndex = 612
         Me.LabelControl10.Text = "Term Type"
         '
         'txtDueType
         '
         Me.txtDueType.Enabled = False
-        Me.txtDueType.Location = New System.Drawing.Point(142, 216)
+        Me.txtDueType.Location = New System.Drawing.Point(142, 236)
         Me.txtDueType.Name = "txtDueType"
         Me.txtDueType.Properties.Appearance.Options.UseFont = True
         Me.txtDueType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -218,7 +221,7 @@ Partial Class frmClientModification
         '
         'ckClientDue
         '
-        Me.ckClientDue.Location = New System.Drawing.Point(142, 195)
+        Me.ckClientDue.Location = New System.Drawing.Point(142, 215)
         Me.ckClientDue.Name = "ckClientDue"
         Me.ckClientDue.Properties.Appearance.Options.UseFont = True
         Me.ckClientDue.Properties.Caption = "Enable Payment Term"
@@ -230,7 +233,7 @@ Partial Class frmClientModification
         Me.txtDueValue.EditValue = "0"
         Me.txtDueValue.Enabled = False
         Me.txtDueValue.EnterMoveNextControl = True
-        Me.txtDueValue.Location = New System.Drawing.Point(142, 239)
+        Me.txtDueValue.Location = New System.Drawing.Point(142, 259)
         Me.txtDueValue.Name = "txtDueValue"
         Me.txtDueValue.Properties.Appearance.Options.UseFont = True
         Me.txtDueValue.Properties.Appearance.Options.UseTextOptions = True
@@ -247,7 +250,7 @@ Partial Class frmClientModification
         Me.lblduetpe.Appearance.Options.UseTextOptions = True
         Me.lblduetpe.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.lblduetpe.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-        Me.lblduetpe.Location = New System.Drawing.Point(22, 242)
+        Me.lblduetpe.Location = New System.Drawing.Point(20, 262)
         Me.lblduetpe.Name = "lblduetpe"
         Me.lblduetpe.Size = New System.Drawing.Size(112, 13)
         Me.lblduetpe.TabIndex = 608
@@ -256,7 +259,7 @@ Partial Class frmClientModification
         'lblTotalPurchase
         '
         Me.lblTotalPurchase.Appearance.Options.UseFont = True
-        Me.lblTotalPurchase.Location = New System.Drawing.Point(33, 289)
+        Me.lblTotalPurchase.Location = New System.Drawing.Point(30, 309)
         Me.lblTotalPurchase.Name = "lblTotalPurchase"
         Me.lblTotalPurchase.Size = New System.Drawing.Size(102, 13)
         Me.lblTotalPurchase.TabIndex = 697
@@ -265,7 +268,7 @@ Partial Class frmClientModification
         'txtCreditLimit
         '
         Me.txtCreditLimit.EditValue = ""
-        Me.txtCreditLimit.Location = New System.Drawing.Point(142, 285)
+        Me.txtCreditLimit.Location = New System.Drawing.Point(142, 305)
         Me.txtCreditLimit.Name = "txtCreditLimit"
         Me.txtCreditLimit.Properties.Appearance.Options.UseFont = True
         Me.txtCreditLimit.Properties.Appearance.Options.UseTextOptions = True
@@ -279,7 +282,7 @@ Partial Class frmClientModification
         '
         'ckCrditLimit
         '
-        Me.ckCrditLimit.Location = New System.Drawing.Point(142, 265)
+        Me.ckCrditLimit.Location = New System.Drawing.Point(142, 285)
         Me.ckCrditLimit.Name = "ckCrditLimit"
         Me.ckCrditLimit.Properties.Appearance.Options.UseFont = True
         Me.ckCrditLimit.Properties.Caption = "Credit Limit"
@@ -288,7 +291,7 @@ Partial Class frmClientModification
         '
         'ckSkipDiscount
         '
-        Me.ckSkipDiscount.Location = New System.Drawing.Point(142, 311)
+        Me.ckSkipDiscount.Location = New System.Drawing.Point(142, 331)
         Me.ckSkipDiscount.Name = "ckSkipDiscount"
         Me.ckSkipDiscount.Properties.Appearance.Options.UseFont = True
         Me.ckSkipDiscount.Properties.Caption = "Skip Discount"
@@ -298,7 +301,7 @@ Partial Class frmClientModification
         'txtClientGroup
         '
         Me.txtClientGroup.EditValue = ""
-        Me.txtClientGroup.Location = New System.Drawing.Point(142, 170)
+        Me.txtClientGroup.Location = New System.Drawing.Point(142, 190)
         Me.txtClientGroup.Name = "txtClientGroup"
         Me.txtClientGroup.Properties.Appearance.Options.UseFont = True
         Me.txtClientGroup.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -321,7 +324,7 @@ Partial Class frmClientModification
         Me.LabelControl2.Appearance.Options.UseFont = True
         Me.LabelControl2.Appearance.Options.UseTextOptions = True
         Me.LabelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-        Me.LabelControl2.Location = New System.Drawing.Point(66, 173)
+        Me.LabelControl2.Location = New System.Drawing.Point(66, 193)
         Me.LabelControl2.Name = "LabelControl2"
         Me.LabelControl2.Size = New System.Drawing.Size(66, 13)
         Me.LabelControl2.TabIndex = 711
@@ -330,7 +333,7 @@ Partial Class frmClientModification
         'groupcode
         '
         Me.groupcode.EnterMoveNextControl = True
-        Me.groupcode.Location = New System.Drawing.Point(358, 171)
+        Me.groupcode.Location = New System.Drawing.Point(358, 190)
         Me.groupcode.Name = "groupcode"
         Me.groupcode.Properties.Appearance.Options.UseFont = True
         Me.groupcode.Size = New System.Drawing.Size(38, 20)
@@ -341,7 +344,7 @@ Partial Class frmClientModification
         '
         Me.LabelControl5.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl5.Appearance.Options.UseFont = True
-        Me.LabelControl5.Location = New System.Drawing.Point(64, 150)
+        Me.LabelControl5.Location = New System.Drawing.Point(61, 170)
         Me.LabelControl5.Name = "LabelControl5"
         Me.LabelControl5.Size = New System.Drawing.Size(71, 13)
         Me.LabelControl5.TabIndex = 715
@@ -350,7 +353,7 @@ Partial Class frmClientModification
         'txtEmail
         '
         Me.txtEmail.EnterMoveNextControl = True
-        Me.txtEmail.Location = New System.Drawing.Point(142, 147)
+        Me.txtEmail.Location = New System.Drawing.Point(142, 167)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.Properties.Appearance.Options.UseFont = True
@@ -364,7 +367,7 @@ Partial Class frmClientModification
         '
         Me.LabelControl6.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LabelControl6.Appearance.Options.UseFont = True
-        Me.LabelControl6.Location = New System.Drawing.Point(83, 127)
+        Me.LabelControl6.Location = New System.Drawing.Point(80, 147)
         Me.LabelControl6.Name = "LabelControl6"
         Me.LabelControl6.Size = New System.Drawing.Size(52, 15)
         Me.LabelControl6.TabIndex = 6
@@ -374,7 +377,7 @@ Partial Class frmClientModification
         '
         Me.txtBirthdate.EditValue = New Date(CType(0, Long))
         Me.txtBirthdate.EnterMoveNextControl = True
-        Me.txtBirthdate.Location = New System.Drawing.Point(142, 124)
+        Me.txtBirthdate.Location = New System.Drawing.Point(142, 144)
         Me.txtBirthdate.Name = "txtBirthdate"
         Me.txtBirthdate.Properties.Appearance.Options.UseFont = True
         Me.txtBirthdate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -386,7 +389,7 @@ Partial Class frmClientModification
         '
         'ckvip
         '
-        Me.ckvip.Location = New System.Drawing.Point(13, 333)
+        Me.ckvip.Location = New System.Drawing.Point(9, 353)
         Me.ckvip.Name = "ckvip"
         Me.ckvip.Properties.Appearance.Options.UseFont = True
         Me.ckvip.Properties.Appearance.Options.UseTextOptions = True
@@ -400,7 +403,7 @@ Partial Class frmClientModification
         '
         Me.txtVIPGuest.EditValue = ""
         Me.txtVIPGuest.Enabled = False
-        Me.txtVIPGuest.Location = New System.Drawing.Point(142, 333)
+        Me.txtVIPGuest.Location = New System.Drawing.Point(142, 353)
         Me.txtVIPGuest.Name = "txtVIPGuest"
         Me.txtVIPGuest.Properties.Appearance.Options.UseFont = True
         Me.txtVIPGuest.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -421,12 +424,30 @@ Partial Class frmClientModification
         'guestid
         '
         Me.guestid.EnterMoveNextControl = True
-        Me.guestid.Location = New System.Drawing.Point(358, 334)
+        Me.guestid.Location = New System.Drawing.Point(358, 353)
         Me.guestid.Name = "guestid"
         Me.guestid.Properties.Appearance.Options.UseFont = True
         Me.guestid.Size = New System.Drawing.Size(38, 20)
         Me.guestid.TabIndex = 718
         Me.guestid.Visible = False
+        '
+        'txtCodeName
+        '
+        Me.txtCodeName.EnterMoveNextControl = True
+        Me.txtCodeName.Location = New System.Drawing.Point(142, 100)
+        Me.txtCodeName.Name = "txtCodeName"
+        Me.txtCodeName.Properties.Appearance.Options.UseFont = True
+        Me.txtCodeName.Size = New System.Drawing.Size(260, 20)
+        Me.txtCodeName.TabIndex = 719
+        '
+        'LabelControl1
+        '
+        Me.LabelControl1.Appearance.Options.UseFont = True
+        Me.LabelControl1.Location = New System.Drawing.Point(73, 103)
+        Me.LabelControl1.Name = "LabelControl1"
+        Me.LabelControl1.Size = New System.Drawing.Size(59, 13)
+        Me.LabelControl1.TabIndex = 720
+        Me.LabelControl1.Text = "Code Name"
         '
         'frmClientModification
         '
@@ -434,7 +455,9 @@ Partial Class frmClientModification
         Me.Appearance.Options.UseFont = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(496, 401)
+        Me.ClientSize = New System.Drawing.Size(496, 435)
+        Me.Controls.Add(Me.txtCodeName)
+        Me.Controls.Add(Me.LabelControl1)
         Me.Controls.Add(Me.guestid)
         Me.Controls.Add(Me.txtVIPGuest)
         Me.Controls.Add(Me.ckvip)
@@ -492,6 +515,7 @@ Partial Class frmClientModification
         CType(Me.txtVIPGuest.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gvVipGuest, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.guestid.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtCodeName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -530,4 +554,6 @@ Partial Class frmClientModification
     Friend WithEvents txtVIPGuest As DevExpress.XtraEditors.SearchLookUpEdit
     Friend WithEvents gvVipGuest As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents guestid As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtCodeName As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
 End Class

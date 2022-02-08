@@ -49,7 +49,7 @@ Public Class frmClientManagement
     End Sub
     Public Sub filterClient()
 
-        LoadXgrid("Select walkinaccount,cifid as 'Client ID',  COMPANYNAME as 'Client Name',  COMPADD as 'Address',  TELEPHONE as 'Telephone', birthdate as 'Birth Date',emailadd as 'Email', " _
+        LoadXgrid("Select walkinaccount,cifid as 'Client ID',  COMPANYNAME as 'Client Name', codename as 'Code Name', COMPADD as 'Address',  TELEPHONE as 'Telephone', birthdate as 'Birth Date',emailadd as 'Email', " _
                   + "ifnull((select sum(debit)-sum(credit) from tblglaccountledger where accountno=tblclientaccounts.cifid and cancelled=0),0) as 'Balance Due', creditlimitamount as 'Credit Limit', enabledue as 'Enable Term',duetype as 'Term Type',case when duetype ='DAYS' then concat('Every ',duevalue, ' day(s) after from charge invoice') when duetype='WEEK' then concat('Every ', date_format(DATE_ADD(current_date, INTERVAL ((7+duevalue) - DAYOFWEEK(current_date)) DAY),'%W'),' of the Week') when duetype='MONTH' then concat('Every ',date_format(STR_TO_DATE(duevalue,'%D'),'%D'), ' day of the month') end as 'Term', skipdiscount as 'Skip Discount', Blocked,BlockedReason from tblclientaccounts where  " & If(ckViewAll.Checked = True, "", If(txtClientGroup.Text = "(Uncategorized)", " groupcode not in (select groupcode from tblclientgroup) ", "groupcode='" & groupcode.Text & "'") & "  and ") & " deleted=0 order by COMPANYNAME asc ", "tblclientaccounts", Em, GridView1, Me)
 
         XgridHideColumn({"Client ID", "walkinaccount"}, GridView1)

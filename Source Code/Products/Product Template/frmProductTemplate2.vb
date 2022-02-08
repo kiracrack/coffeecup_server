@@ -38,40 +38,40 @@ Public Class frmProductTemplate2
     End Sub
 
     Public Sub LoadCategory()
-        LoadXgridLookupSearch("select catid,DESCRIPTION 'Select Category' from tblprocategory order by DESCRIPTION asc", "tblprocategory", txtprocat, combogrid, Me)
+        LoadXgridLookupSearch("select catid,DESCRIPTION 'Select Category' from tblprocategory order by DESCRIPTION asc", "tblprocategory", txtCategory, combogrid, Me)
         combogrid.Columns("catid").Visible = False
     End Sub
 
-    Private Sub txtprocat_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtprocat.EditValueChanged
+    Private Sub txtCategory_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCategory.EditValueChanged
         On Error Resume Next
-        Dim iCurrentRow As Integer = CInt(txtprocat.Properties.View.FocusedRowHandle.ToString)
-        catid.Text = txtprocat.Properties.View.GetFocusedRowCellValue("catid").ToString()
+        Dim iCurrentRow As Integer = CInt(txtCategory.Properties.View.FocusedRowHandle.ToString)
+        catid.Text = txtCategory.Properties.View.GetFocusedRowCellValue("catid").ToString()
         LoadSubCategory()
         ValidateProductCategory()
-        If gridsubcategory.RowCount = 0 Then
-            txtUnit.Focus()
-        Else
-            txtSubCategory.Focus()
-            'txtSubCategory.ShowPopup()
-        End If
+        'If gridsubcategory.RowCount = 0 Then
+        '    txtUnit.Focus()
+        'Else
+        '    txtSubCategory.Focus()
+        '    'txtSubCategory.ShowPopup()
+        'End If
     End Sub
 
     Public Sub LoadSubCategory()
-        If catid.Text = "" Then Exit Sub
-        LoadXgridLookupSearch("select subcatid, DESCRIPTION 'Select' from tblprosubcategory where catid='" & catid.Text & "' order by description asc", "tblprosubcategory", txtSubCategory, gridsubcategory, Me)
+        If txtCategory.Text = "" Then Exit Sub
+        LoadXgridLookupSearch("select subcatid, DESCRIPTION 'Select' from tblprosubcategory where catid='" & txtCategory.EditValue & "' order by description asc", "tblprosubcategory", txtSubCategory, gridsubcategory, Me)
         gridsubcategory.Columns("subcatid").Visible = False
-        If gridsubcategory.RowCount = 0 Then
-            txtSubCategory.Enabled = False
-        Else
-            txtSubCategory.Enabled = True
-        End If
+        'If gridsubcategory.RowCount = 0 Then
+        '    txtSubCategory.Enabled = False
+        'Else
+        '    txtSubCategory.Enabled = True
+        'End If
         txtSubCategory.Focus()
     End Sub
 
     Private Sub txtSubCategory_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSubCategory.EditValueChanged
         On Error Resume Next
-        Dim iCurrentRow As Integer = CInt(txtprocat.Properties.View.FocusedRowHandle.ToString)
-        subcatid.Text = txtprocat.Properties.View.GetFocusedRowCellValue("subcatid").ToString()
+        Dim iCurrentRow As Integer = CInt(txtCategory.Properties.View.FocusedRowHandle.ToString)
+        subcatid.Text = txtCategory.Properties.View.GetFocusedRowCellValue("subcatid").ToString()
         txtUnit.Focus()
     End Sub
 
@@ -99,9 +99,9 @@ Public Class frmProductTemplate2
             XtraMessageBox.Show("Please enter itemcode without space!", compname, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             productid.Focus()
             Exit Function
-        ElseIf txtprocat.Text = "" Then
+        ElseIf txtCategory.Text = "" Then
             XtraMessageBox.Show("Please select category!", compname, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            txtprocat.Focus()
+            txtCategory.Focus()
             Exit Function
         ElseIf txtProductName.Text = "" Then
             XtraMessageBox.Show("Please provide particular name!", compname, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -128,7 +128,7 @@ Public Class frmProductTemplate2
             Exit Function
         End If
 
-        UpdateProductTemplate2(mode.Text, productid.Text, txtBarcode.Text, catid.Text, subcatid.Text, rchar(txtProductName.Text), rchar(txtDescription.Text), rchar(txtUnit.Text), Val(CC(txtReorderPoint.Text)), ckEnableSell.CheckState, ckVatEnable.CheckState, ckServiceCharge.CheckState, ckNonInventory.CheckState, ckStandardCosting.CheckState, ckMenuMakerServices.CheckState, ckCustomizeProductOrder.CheckState, ckRequiredAttendingPerson.CheckState, ckOfficeCenter.CheckState, officeid.Text, ckComputeLength.CheckState, ckEnableCoupon.CheckState, Val(CC(txtPurchasedPrice.Text)), 0, Val(CC(txtSellingPrice.Text)), If(esbq.Checked = True, "esbq", "esba"), ckInputDiscount.CheckState, False)
+        UpdateProductTemplate2(mode.Text, productid.Text, txtBarcode.Text, txtCategory.EditValue, txtSubCategory.EditValue, rchar(txtProductName.Text), rchar(txtDescription.Text), rchar(txtUnit.Text), Val(CC(txtReorderPoint.Text)), ckEnableSell.CheckState, ckVatEnable.CheckState, ckServiceCharge.CheckState, ckNonInventory.CheckState, ckStandardCosting.CheckState, ckMenuMakerServices.CheckState, ckCustomizeProductOrder.CheckState, ckRequiredAttendingPerson.CheckState, ckOfficeCenter.CheckState, officeid.Text, ckComputeLength.CheckState, ckEnableCoupon.CheckState, Val(CC(txtPurchasedPrice.Text)), 0, Val(CC(txtSellingPrice.Text)), If(esbq.Checked = True, "esbq", "esba"), ckInputDiscount.CheckState, False)
         UpdateInventoryInfo(productid.Text, txtProductName.Text, catid.Text, txtUnit.Text, Val(CC(txtSellingPrice.Text)))
         UpdateProductImage(productid.Text, PictureEdit1, Me)
         XtraMessageBox.Show("Product successfully saved!", compname, MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -158,10 +158,8 @@ Public Class frmProductTemplate2
         msda.Fill(dst, 0)
         For cnt = 0 To dst.Tables(0).Rows.Count - 1
             With (dst.Tables(0))
-                txtprocat.Text = .Rows(cnt)("catid").ToString
-                catid.Text = .Rows(cnt)("catid").ToString
-                subcatid.Text = .Rows(cnt)("subcatid").ToString
-                txtSubCategory.Text = .Rows(cnt)("subcatid").ToString
+                txtCategory.EditValue = .Rows(cnt)("catid").ToString
+                txtSubCategory.EditValue = .Rows(cnt)("subcatid").ToString
                 txtBarcode.Text = .Rows(cnt)("barcode").ToString
                 txtProductName.Text = .Rows(cnt)("itemname").ToString
                 txtDescription.Text = .Rows(cnt)("description").ToString
@@ -220,8 +218,8 @@ Public Class frmProductTemplate2
 
     Private Sub id_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles productid.KeyPress
         If e.KeyChar = Chr(13) Then
-            If txtprocat.Text = "" Then
-                txtprocat.Focus()
+            If txtCategory.Text = "" Then
+                txtCategory.Focus()
             Else
                 txtProductName.Focus()
             End If
@@ -326,9 +324,9 @@ Public Class frmProductTemplate2
     End Sub
 
     Private Sub HyperlinkLabelControl2_Click(sender As Object, e As EventArgs) Handles HyperlinkLabelControl2.Click
-        If txtprocat.Text = "" Then
+        If txtCategory.Text = "" Then
             XtraMessageBox.Show("Please select category!", compname, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            txtprocat.Focus()
+            txtCategory.Focus()
             Exit Sub
         End If
         frmProductSubCategory.catid.Text = catid.Text
@@ -341,10 +339,10 @@ Public Class frmProductTemplate2
         LoadSubCategory()
     End Sub
 
-    Private Sub txtprocat_GotFocus(sender As Object, e As EventArgs) Handles txtprocat.GotFocus
+    Private Sub txtprocat_GotFocus(sender As Object, e As EventArgs) Handles txtCategory.GotFocus
         'txtprocat.ShowPopup()
     End Sub
-     
+
     Private Sub txtUnit_GotFocus(sender As Object, e As EventArgs) Handles txtUnit.GotFocus
         'txtUnit.ShowPopup()
     End Sub
@@ -372,9 +370,9 @@ Public Class frmProductTemplate2
             XtraMessageBox.Show("Please provide particular name!", compname, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             txtProductName.Focus()
             Exit Sub
-        ElseIf txtprocat.Text = "" Then
+        ElseIf txtCategory.Text = "" Then
             XtraMessageBox.Show("Please select product category!", compname, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            txtprocat.Focus()
+            txtCategory.Focus()
             Exit Sub
         ElseIf txtUnit.Text = "" Then
             XtraMessageBox.Show("Please select unit!", compname, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
